@@ -7,8 +7,13 @@ import { BsTrophy } from 'react-icons/bs';
 
 export function Publications() {
     return (
-        <Section id="publications" title="Publications">
-            <div className="space-y-8">
+        <Section
+            id="publications"
+            title="Research Publications"
+            subtitle="Contributions to Natural Language Processing and low-resource language research"
+            className="bg-white dark:bg-gray-900"
+        >
+            <div className="max-w-5xl mx-auto space-y-8">
                 {portfolioData.publications.map((publication, index) => (
                     <motion.div
                         key={index}
@@ -18,7 +23,7 @@ export function Publications() {
                         transition={{ delay: index * 0.1 }}
                     >
                         <Card hover>
-                            <div className="space-y-4">
+                            <div className="p-6 space-y-4">
                                 {/* Title */}
                                 <h3 className="text-xl font-bold text-gray-900 dark:text-white leading-tight">
                                     {publication.title}
