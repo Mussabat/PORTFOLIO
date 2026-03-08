@@ -125,11 +125,28 @@ export const portfolioData: PortfolioData = {
     ],
     projects: [
         {
+            title: 'Kellafotey',
+            description:
+                'Production-grade AI-driven interview screening platform built with microservices architecture. Designed database schema, implemented CI/CD pipelines, and developed core APIs supporting automated candidate evaluation and workflow management.',
+            techStack: ['Spring Boot', 'PostgreSQL', 'Microservices', 'AWS SES', 'CI/CD', 'Keycloak'],
+            liveUrl: 'https://kellafotey.celloscope.net/',
+            category: 'Full Stack',
+        },
+        {
+            title: 'Primefocus Health',
+            description:
+                'Mobile health platform (iOS & Android) showcased at CES, launched within 7 months. Led development of core screens, implemented push notifications, and optimized performance for production release at a major tech event.',
+            techStack: ['Flutter', 'Push Notifications', 'REST APIs', 'State Management'],
+            liveUrl: 'https://apps.apple.com/us/app/primefocus-health/id6748019074',
+            category: 'Mobile',
+        },
+        {
             title: 'StudyMatch',
             description:
                 'A mobile application connecting students with study partners based on shared interests and academic goals. Features real-time matching, chat functionality, and study group coordination.',
             techStack: ['Flutter', 'GoRouter', 'BLoC', 'Supabase', 'PostgreSQL'],
             githubUrl: 'https://github.com/Mussabat',
+            category: 'Mobile',
         },
         {
             title: 'Wisely',
@@ -137,6 +154,7 @@ export const portfolioData: PortfolioData = {
                 'Ethical investment discovery mobile application helping users find and track socially responsible investment opportunities. Provides detailed company ESG ratings and personalized recommendations.',
             techStack: ['Flutter', 'State Management', 'REST APIs'],
             githubUrl: 'https://github.com/Mussabat',
+            category: 'Mobile',
         },
         {
             title: 'Twitter Clone API',
@@ -144,6 +162,7 @@ export const portfolioData: PortfolioData = {
                 'Backend REST API replicating core Twitter features including tweets, follows, likes, and timeline generation. Built with modern async patterns and comprehensive test coverage.',
             techStack: ['Python', 'FastAPI', 'PostgreSQL', 'JWT', 'Docker'],
             githubUrl: 'https://github.com/Mussabat',
+            category: 'Backend',
         },
     ],
     achievements: [

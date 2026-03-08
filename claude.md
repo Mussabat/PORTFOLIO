@@ -106,7 +106,25 @@ Full-stack software engineer passionate about solving complex problems and build
 
 ## 💼 Featured Projects
 
-### 1. StudyMatch
+### 1. Kellafotey (Celloscope)
+**Description:** Production-grade AI-driven interview screening platform built with microservices architecture. Designed database schema, implemented CI/CD pipelines, and developed core APIs supporting automated candidate evaluation and workflow management.
+
+**Tech Stack:** Spring Boot, PostgreSQL, Microservices, AWS SES, CI/CD, Keycloak
+
+**Live Demo:** https://kellafotey.celloscope.net/
+
+---
+
+### 2. Primefocus Health (Celloscope)
+**Description:** Mobile health platform (iOS & Android) showcased at CES, launched within 7 months. Led development of core screens, implemented push notifications, and optimized performance for production release at a major tech event.
+
+**Tech Stack:** Flutter, Push Notifications, REST APIs, State Management
+
+**App Store:** https://apps.apple.com/us/app/primefocus-health/id6748019074
+
+---
+
+### 3. StudyMatch
 **Description:** Mobile application connecting students with study partners based on shared interests and academic goals. Features real-time matching, chat functionality, and study group coordination.
 
 **Tech Stack:** Flutter, GoRouter, BLoC, Supabase, PostgreSQL
@@ -115,7 +133,7 @@ Full-stack software engineer passionate about solving complex problems and build
 
 ---
 
-### 2. Wisely
+### 4. Wisely
 **Description:** Ethical investment discovery mobile application helping users find and track socially responsible investment opportunities. Provides detailed company ESG ratings and personalized recommendations.
 
 **Tech Stack:** Flutter, State Management, REST APIs
@@ -124,7 +142,7 @@ Full-stack software engineer passionate about solving complex problems and build
 
 ---
 
-### 3. Twitter Clone API
+### 5. Twitter Clone API
 **Description:** Backend REST API replicating core Twitter features including tweets, follows, likes, and timeline generation. Built with modern async patterns and comprehensive test coverage.
 
 **Tech Stack:** Python, FastAPI, PostgreSQL, JWT, Docker
