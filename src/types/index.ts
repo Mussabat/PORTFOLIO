@@ -31,12 +31,24 @@ export interface Project {
     githubUrl?: string;
     liveUrl?: string;
     imageUrl?: string;
+    category?: string;
 }
 
 export interface Achievement {
     title: string;
     description: string;
     year?: string;
+}
+
+export interface Publication {
+    title: string;
+    authors: string;
+    journal: string;
+    year: string;
+    citations: number;
+    url: string;
+    pdfUrl?: string;
+    abstract: string;
 }
 
 export interface PortfolioData {
@@ -52,4 +64,5 @@ export interface PortfolioData {
     experiences: Experience[];
     projects: Project[];
     achievements: Achievement[];
+    publications: Publication[];
 }

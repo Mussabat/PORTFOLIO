@@ -7,6 +7,16 @@
 
 ---
 
+## 🎓 Research & Publications
+
+**Total Publications:** 3  
+**Total Citations:** 18 (as of March 2026)  
+**Google Scholar:** [View Profile](https://scholar.google.com/citations?user=-bwzjRwAAAAJ&hl=en)
+
+All publications are in the domain of Natural Language Processing (NLP) focusing on low-resource languages, transformer models, and social media text analysis.
+
+---
+
 ## 📋 Project Overview
 
 This is a world-class, production-ready portfolio website built for Nafisa Tabassum, a Full Stack Software Engineer based in London, UK. The portfolio showcases professional experience, projects, achievements, and skills in a modern, interactive, and highly polished interface designed to impress top-tier tech company recruiters.
@@ -104,6 +114,43 @@ Full-stack software engineer passionate about solving complex problems and build
 
 ---
 
+## 📚 Publications
+
+### 1. Sandalphon@DravidianLangTech-EACL2024: Hate and offensive language detection in Telugu code-mixed text using transliteration-augmentation
+**Authors:** Nafisa Tabassum, Mosabbir Khan, Shawly Ahsan, Jawad Hossain, Mohammed Moshiul Hoque  
+**Conference:** Proceedings of the Fourth Workshop on Speech, Vision, and Language Technologies for Dravidian Languages  
+**Year:** 2024  
+**Citations:** 5  
+**Paper:** [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-bwzjRwAAAAJ&citation_for_view=-bwzjRwAAAAJ:u-x6o8ySG0sC) | [PDF](https://aclanthology.org/2024.dravidianlangtech-1.28.pdf)
+
+**Abstract:** Hate and offensive language in online platforms pose significant challenges, necessitating automatic detection methods. This study investigates the effectiveness of transliteration-augmented datasets for Telugu code-mixed text. Experimental findings demonstrate the superiority of transformer models, particularly Telugu-BERT, achieving the highest f1-score of 0.77 on the augmented dataset, ranking 1st position in the leaderboard.
+
+---
+
+### 2. Punny_punctuators@DravidianLangTech-EACL2024: Transformer-based approach for detection and classification of fake news in Malayalam social media text
+**Authors:** Nafisa Tabassum, Sumaiya Aodhora, Rowshon Akter, Jawad Hossain, Shawly Ahsan, Mohammed Moshiul Hoque  
+**Conference:** Proceedings of the Fourth Workshop on Speech, Vision, and Language Technologies for Dravidian Languages  
+**Year:** 2024  
+**Citations:** 10  
+**Paper:** [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-bwzjRwAAAAJ&citation_for_view=-bwzjRwAAAAJ:9yKSN-GCB0IC) | [PDF](https://aclanthology.org/2024.dravidianlangtech-1.30.pdf)
+
+**Abstract:** The alarming rise of fake news on social media poses a significant threat to public discourse and decision-making. This paper presents the participation of team Punny_Punctuators in the Fake News Detection in Dravidian Languages shared task at DravidianLangTech@EACL 2024. Malayalam-BERT achieved the best performance on both sub-tasks, which obtained us 2nd place with a macro f1-score of 0.87 for subtask-1 and 11th place with a macro f1-score of 0.17 for subtask-2.
+
+---
+
+### 3. Classifying textual sentiment using bidirectional encoder representations from transformers
+**Authors:** Shawly Ahsan, Fairooz Tasnia, Nafisa Tabassum, Avishek Das, Mohammed Moshiul Hoque, Nazmul Siddique  
+**Conference:** 2023 26th International Conference on Computer and Information Technology (ICCIT)  
+**Year:** 2023  
+**Citations:** 3  
+**Paper:** [Google Scholar](https://scholar.google.com/citations?view_op=view_citation&hl=en&user=-bwzjRwAAAAJ&citation_for_view=-bwzjRwAAAAJ:u5HHmVD_uO8C) | [IEEE Xplore](https://ieeexplore.ieee.org/abstract/document/10441046/)
+
+**Abstract:** Textual sentiment analysis (TSA) has gained significant attention recently for its wide-ranging applications across various research domains and industries. This paper introduces an intelligent approach, leveraging transformer-based learning techniques by harnessing the potent capabilities of self-attention mechanisms for dealing with Bengali sentences containing ungrammatical structures or local dialects. Experimental results reveal that the Bangla BERT model outperforms the other baselines.
+
+**Google Scholar Profile:** [View Profile](https://scholar.google.com/citations?user=-bwzjRwAAAAJ&hl=en)
+
+---
+
 ## 💼 Featured Projects
 
 ### 1. Kellafotey (Celloscope)
@@ -160,10 +207,11 @@ Full-stack software engineer passionate about solving complex problems and build
 4. **Experience Timeline** - Professional work history with achievements
 5. **Projects Section** - Interactive cards with filtering (All, Mobile, Backend, Full Stack)
 6. **Achievements Section** - Scholarships, competitions, recognitions
-7. **Testimonials Section** - Colleague feedback (placeholder)
-8. **Blog Section** - Article cards (placeholder for future content)
-9. **Contact Section** - Professional contact form
-10. **Footer** - Quick links and social media
+7. **Publications Section** - Research papers with citation counts and links to PDFs
+8. **Testimonials Section** - Colleague feedback (placeholder)
+9. **Blog Section** - Article cards (placeholder for future content)
+10. **Contact Section** - Professional contact form
+11. **Footer** - Quick links and social media
 
 ### Design Features
 - **Loading Animation:** Initial loading screen with progress bar
@@ -210,6 +258,7 @@ portfolio/
 │   │   ├── LoadingScreen.tsx
 │   │   ├── Navbar.tsx
 │   │   ├── Projects.tsx
+│   │   ├── Publications.tsx
 │   │   ├── Skills.tsx
 │   │   └── Testimonials.tsx
 │   ├── data/
@@ -324,6 +373,13 @@ npm run lint         # Run ESLint
 - Blog section is placeholder (ready for future content)
 - Testimonials section is placeholder (can be customized)
 - Project screenshots not yet added (using gradient placeholders)
+
+### Recent Updates (March 8, 2026):
+- ✅ Added Publications section with 3 research papers
+- ✅ Integrated citation counts (18 total citations)
+- ✅ Added links to Google Scholar and PDF versions
+- ✅ Created Publications.tsx component with rich UI
+- ✅ Updated portfolio data model to include publications
 
 ---
 
