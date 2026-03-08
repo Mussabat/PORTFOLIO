@@ -129,7 +129,7 @@ Full-stack software engineer passionate about solving complex problems and build
 
 **Tech Stack:** Flutter, GoRouter, BLoC, Supabase, PostgreSQL
 
-**GitHub:** https://github.com/Mussabat
+**GitHub:** https://github.com/Mussabat/study_match
 
 ---
 
@@ -138,7 +138,7 @@ Full-stack software engineer passionate about solving complex problems and build
 
 **Tech Stack:** Flutter, State Management, REST APIs
 
-**GitHub:** https://github.com/Mussabat
+**GitHub:** https://github.com/Mussabat/Wisely
 
 ---
 
@@ -147,7 +147,7 @@ Full-stack software engineer passionate about solving complex problems and build
 
 **Tech Stack:** Python, FastAPI, PostgreSQL, JWT, Docker
 
-**GitHub:** https://github.com/Mussabat
+**GitHub:** https://github.com/Mussabat/twitter-clone-api
 
 ---
 

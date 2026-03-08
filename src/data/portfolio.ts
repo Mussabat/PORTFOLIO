@@ -145,7 +145,7 @@ export const portfolioData: PortfolioData = {
             description:
                 'A mobile application connecting students with study partners based on shared interests and academic goals. Features real-time matching, chat functionality, and study group coordination.',
             techStack: ['Flutter', 'GoRouter', 'BLoC', 'Supabase', 'PostgreSQL'],
-            githubUrl: 'https://github.com/Mussabat',
+            githubUrl: 'https://github.com/Mussabat/study_match',
             category: 'Mobile',
         },
         {
@@ -153,7 +153,7 @@ export const portfolioData: PortfolioData = {
             description:
                 'Ethical investment discovery mobile application helping users find and track socially responsible investment opportunities. Provides detailed company ESG ratings and personalized recommendations.',
             techStack: ['Flutter', 'State Management', 'REST APIs'],
-            githubUrl: 'https://github.com/Mussabat',
+            githubUrl: 'https://github.com/Mussabat/Wisely',
             category: 'Mobile',
         },
         {
@@ -161,7 +161,7 @@ export const portfolioData: PortfolioData = {
             description:
                 'Backend REST API replicating core Twitter features including tweets, follows, likes, and timeline generation. Built with modern async patterns and comprehensive test coverage.',
             techStack: ['Python', 'FastAPI', 'PostgreSQL', 'JWT', 'Docker'],
-            githubUrl: 'https://github.com/Mussabat',
+            githubUrl: 'https://github.com/Mussabat/twitter-clone-api',
             category: 'Backend',
         },
     ],
