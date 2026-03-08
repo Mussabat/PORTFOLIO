@@ -1,0 +1,7 @@
+# Placeholder for Resume PDF
+
+Please replace this file with your actual resume PDF.
+
+The resume should be named `resume.pdf` and placed in the `public` folder.
+
+This will enable the "Download Resume" button in the portfolio to work correctly.
