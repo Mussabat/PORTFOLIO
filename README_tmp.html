@@ -1,0 +1,564 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>README.md</title>
+    <meta http-equiv="Content-type" content="text/html;charset=UTF-8">
+    
+<style>
+/* https://github.com/microsoft/vscode/blob/master/extensions/markdown-language-features/media/markdown.css */
+/*---------------------------------------------------------------------------------------------
+ *  Copyright (c) Microsoft Corporation. All rights reserved.
+ *  Licensed under the MIT License. See License.txt in the project root for license information.
+ *--------------------------------------------------------------------------------------------*/
+
+body {
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+	padding: 0 26px;
+	line-height: var(--vscode-markdown-line-height, 22px);
+	word-wrap: break-word;
+}
+
+html,footer,header{
+	font-family: var(--vscode-markdown-font-family, -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif);
+	font-size: var(--vscode-markdown-font-size, 14px);
+}
+
+#code-csp-warning {
+	position: fixed;
+	top: 0;
+	right: 0;
+	color: white;
+	margin: 16px;
+	text-align: center;
+	font-size: 12px;
+	font-family: sans-serif;
+	background-color:#444444;
+	cursor: pointer;
+	padding: 6px;
+	box-shadow: 1px 1px 1px rgba(0,0,0,.25);
+}
+
+#code-csp-warning:hover {
+	text-decoration: none;
+	background-color:#007acc;
+	box-shadow: 2px 2px 2px rgba(0,0,0,.25);
+}
+
+body.scrollBeyondLastLine {
+	margin-bottom: calc(100vh - 22px);
+}
+
+body.showEditorSelection .code-line {
+	position: relative;
+}
+
+body.showEditorSelection .code-active-line:before,
+body.showEditorSelection .code-line:hover:before {
+	content: "";
+	display: block;
+	position: absolute;
+	top: 0;
+	left: -12px;
+	height: 100%;
+}
+
+body.showEditorSelection li.code-active-line:before,
+body.showEditorSelection li.code-line:hover:before {
+	left: -30px;
+}
+
+.vscode-light.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.15);
+}
+
+.vscode-light.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(0, 0, 0, 0.40);
+}
+
+.vscode-light.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-dark.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.4);
+}
+
+.vscode-dark.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 255, 255, 0.60);
+}
+
+.vscode-dark.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+.vscode-high-contrast.showEditorSelection .code-active-line:before {
+	border-left: 3px solid rgba(255, 160, 0, 0.7);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line:hover:before {
+	border-left: 3px solid rgba(255, 160, 0, 1);
+}
+
+.vscode-high-contrast.showEditorSelection .code-line .code-line:hover:before {
+	border-left: none;
+}
+
+img {
+	max-width: 100%;
+	max-height: 100%;
+}
+
+a {
+	text-decoration: none;
+}
+
+a:hover {
+	text-decoration: underline;
+}
+
+a:focus,
+input:focus,
+select:focus,
+textarea:focus {
+	outline: 1px solid -webkit-focus-ring-color;
+	outline-offset: -1px;
+}
+
+hr {
+	border: 0;
+	height: 2px;
+	border-bottom: 2px solid;
+}
+
+h1 {
+	padding-bottom: 0.3em;
+	line-height: 1.2;
+	border-bottom-width: 1px;
+	border-bottom-style: solid;
+}
+
+h1, h2, h3 {
+	font-weight: normal;
+}
+
+table {
+	border-collapse: collapse;
+}
+
+table > thead > tr > th {
+	text-align: left;
+	border-bottom: 1px solid;
+}
+
+table > thead > tr > th,
+table > thead > tr > td,
+table > tbody > tr > th,
+table > tbody > tr > td {
+	padding: 5px 10px;
+}
+
+table > tbody > tr + tr > td {
+	border-top: 1px solid;
+}
+
+blockquote {
+	margin: 0 7px 0 5px;
+	padding: 0 16px 0 10px;
+	border-left-width: 5px;
+	border-left-style: solid;
+}
+
+code {
+	font-family: Menlo, Monaco, Consolas, "Droid Sans Mono", "Courier New", monospace, "Droid Sans Fallback";
+	font-size: 1em;
+	line-height: 1.357em;
+}
+
+body.wordWrap pre {
+	white-space: pre-wrap;
+}
+
+pre:not(.hljs),
+pre.hljs code > div {
+	padding: 16px;
+	border-radius: 3px;
+	overflow: auto;
+}
+
+pre code {
+	color: var(--vscode-editor-foreground);
+	tab-size: 4;
+}
+
+/** Theming */
+
+.vscode-light pre {
+	background-color: rgba(220, 220, 220, 0.4);
+}
+
+.vscode-dark pre {
+	background-color: rgba(10, 10, 10, 0.4);
+}
+
+.vscode-high-contrast pre {
+	background-color: rgb(0, 0, 0);
+}
+
+.vscode-high-contrast h1 {
+	border-color: rgb(0, 0, 0);
+}
+
+.vscode-light table > thead > tr > th {
+	border-color: rgba(0, 0, 0, 0.69);
+}
+
+.vscode-dark table > thead > tr > th {
+	border-color: rgba(255, 255, 255, 0.69);
+}
+
+.vscode-light h1,
+.vscode-light hr,
+.vscode-light table > tbody > tr + tr > td {
+	border-color: rgba(0, 0, 0, 0.18);
+}
+
+.vscode-dark h1,
+.vscode-dark hr,
+.vscode-dark table > tbody > tr + tr > td {
+	border-color: rgba(255, 255, 255, 0.18);
+}
+
+</style>
+
+<style>
+/* Tomorrow Theme */
+/* http://jmblog.github.com/color-themes-for-google-code-highlightjs */
+/* Original theme - https://github.com/chriskempson/tomorrow-theme */
+
+/* Tomorrow Comment */
+.hljs-comment,
+.hljs-quote {
+	color: #8e908c;
+}
+
+/* Tomorrow Red */
+.hljs-variable,
+.hljs-template-variable,
+.hljs-tag,
+.hljs-name,
+.hljs-selector-id,
+.hljs-selector-class,
+.hljs-regexp,
+.hljs-deletion {
+	color: #c82829;
+}
+
+/* Tomorrow Orange */
+.hljs-number,
+.hljs-built_in,
+.hljs-builtin-name,
+.hljs-literal,
+.hljs-type,
+.hljs-params,
+.hljs-meta,
+.hljs-link {
+	color: #f5871f;
+}
+
+/* Tomorrow Yellow */
+.hljs-attribute {
+	color: #eab700;
+}
+
+/* Tomorrow Green */
+.hljs-string,
+.hljs-symbol,
+.hljs-bullet,
+.hljs-addition {
+	color: #718c00;
+}
+
+/* Tomorrow Blue */
+.hljs-title,
+.hljs-section {
+	color: #4271ae;
+}
+
+/* Tomorrow Purple */
+.hljs-keyword,
+.hljs-selector-tag {
+	color: #8959a8;
+}
+
+.hljs {
+	display: block;
+	overflow-x: auto;
+	color: #4d4d4c;
+	padding: 0.5em;
+}
+
+.hljs-emphasis {
+	font-style: italic;
+}
+
+.hljs-strong {
+	font-weight: bold;
+}
+</style>
+
+<style>
+/*
+ * Custom MD PDF CSS
+ */
+html,footer,header{
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+
+ }
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe WPC", "Segoe UI", "Ubuntu", "Droid Sans", sans-serif, "Meiryo";
+	padding: 0 12px;
+}
+
+pre {
+	background-color: #f8f8f8;
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+	overflow-x: auto;
+	white-space: pre-wrap;
+	overflow-wrap: break-word;
+}
+
+pre:not(.hljs) {
+	padding: 23px;
+	line-height: 19px;
+}
+
+blockquote {
+	background: rgba(127, 127, 127, 0.1);
+	border-color: rgba(0, 122, 204, 0.5);
+}
+
+.emoji {
+	height: 1.4em;
+}
+
+code {
+	font-size: 14px;
+	line-height: 19px;
+}
+
+/* for inline code */
+:not(pre):not(.hljs) > code {
+	color: #C9AE75; /* Change the old color so it seems less like an error */
+	font-size: inherit;
+}
+
+/* Page Break : use <div class="page"/> to insert page break
+-------------------------------------------------------- */
+.page {
+	page-break-after: always;
+}
+
+</style>
+<link rel="stylesheet" href="file:///Users/nafisatabassum/dev/portfolio/R%3A%5C2.Travail%5C1.Enseignement%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css"><link rel="stylesheet" href="file:///Users/nafisatabassum/dev/portfolio/D%3A%5Crdaros%5CCours%5C_1.Outils%5C2.Developpement%5C1.SCSS%5Cmain.css" type="text/css">
+</head>
+
+<body>
+    <h1 id="nafisa-tabassum---portfolio-website">Nafisa Tabassum - Portfolio Website</h1>
+<p>A modern, world-class portfolio website built with React, TypeScript, and TailwindCSS, showcasing professional experience, projects, and achievements.</p>
+<p><a href="https://www.typescriptlang.org/"><img src="https://img.shields.io/badge/TypeScript-5.2-blue" alt="TypeScript"></a><br>
+<a href="https://reactjs.org/"><img src="https://img.shields.io/badge/React-18.2-61dafb" alt="React"></a><br>
+<a href="https://tailwindcss.com/"><img src="https://img.shields.io/badge/TailwindCSS-3.4-38bdf8" alt="TailwindCSS"></a><br>
+<a href="https://vitejs.dev/"><img src="https://img.shields.io/badge/Vite-5.1-646cff" alt="Vite"></a></p>
+<h2 id="%E2%9C%A8-features">✨ Features</h2>
+<ul>
+<li><strong>Modern Design</strong>: Clean, professional UI inspired by FAANG engineer portfolios</li>
+<li><strong>Dark/Light Mode</strong>: Seamless theme switching with persistent preferences</li>
+<li><strong>Fully Responsive</strong>: Optimized for all devices from mobile to desktop</li>
+<li><strong>Smooth Animations</strong>: Powered by Framer Motion for engaging user experience</li>
+<li><strong>SEO Optimized</strong>: Meta tags, semantic HTML, and performance best practices</li>
+<li><strong>Accessible</strong>: WCAG compliant with keyboard navigation and ARIA labels</li>
+<li><strong>Performance</strong>: Code-splitting, lazy loading, and optimized bundle size</li>
+<li><strong>TypeScript</strong>: Type-safe development with full IntelliSense support</li>
+</ul>
+<h2 id="%F0%9F%9A%80-quick-start">🚀 Quick Start</h2>
+<h3 id="prerequisites">Prerequisites</h3>
+<ul>
+<li>Node.js 18+ and npm/yarn/pnpm</li>
+<li>Git</li>
+</ul>
+<h3 id="installation">Installation</h3>
+<ol>
+<li>
+<p><strong>Clone the repository</strong></p>
+<pre class="hljs"><code><div>git <span class="hljs-built_in">clone</span> https://github.com/Mussabat/portfolio.git
+<span class="hljs-built_in">cd</span> portfolio
+</div></code></pre>
+</li>
+<li>
+<p><strong>Install dependencies</strong></p>
+<pre class="hljs"><code><div>npm install
+<span class="hljs-comment"># or</span>
+yarn install
+<span class="hljs-comment"># or</span>
+pnpm install
+</div></code></pre>
+</li>
+<li>
+<p><strong>Start development server</strong></p>
+<pre class="hljs"><code><div>npm run dev
+<span class="hljs-comment"># or</span>
+yarn dev
+<span class="hljs-comment"># or</span>
+pnpm dev
+</div></code></pre>
+</li>
+<li>
+<p><strong>Open your browser</strong></p>
+<p>Navigate to <code>http://localhost:5173</code></p>
+</li>
+</ol>
+<h2 id="%F0%9F%9B%A0%EF%B8%8F-tech-stack">🛠️ Tech Stack</h2>
+<h3 id="core">Core</h3>
+<ul>
+<li><strong>React 18.2</strong> - UI library</li>
+<li><strong>TypeScript 5.2</strong> - Type safety and developer experience</li>
+<li><strong>Vite 5.1</strong> - Lightning-fast build tool and dev server</li>
+</ul>
+<h3 id="styling">Styling</h3>
+<ul>
+<li><strong>TailwindCSS 3.4</strong> - Utility-first CSS framework</li>
+<li><strong>PostCSS</strong> - CSS transformations</li>
+<li><strong>Google Fonts</strong> - Inter &amp; JetBrains Mono</li>
+</ul>
+<h3 id="animation">Animation</h3>
+<ul>
+<li><strong>Framer Motion 11</strong> - Production-ready animation library</li>
+</ul>
+<h3 id="additional">Additional</h3>
+<ul>
+<li><strong>React Icons</strong> - Comprehensive icon library</li>
+<li><strong>React Helmet Async</strong> - SEO and document head management</li>
+</ul>
+<h2 id="%F0%9F%93%A6-build--deploy">📦 Build &amp; Deploy</h2>
+<h3 id="build-for-production">Build for Production</h3>
+<pre class="hljs"><code><div>npm run build
+</div></code></pre>
+<p>This creates an optimized production build in the <code>dist</code> folder.</p>
+<h3 id="preview-production-build">Preview Production Build</h3>
+<pre class="hljs"><code><div>npm run preview
+</div></code></pre>
+<h3 id="deploy">Deploy</h3>
+<p>The built files in <code>dist/</code> can be deployed to any static hosting service:</p>
+<ul>
+<li><strong>Vercel</strong>: <code>vercel --prod</code></li>
+<li><strong>Netlify</strong>: Drag &amp; drop <code>dist</code> folder or use Netlify CLI</li>
+<li><strong>GitHub Pages</strong>: Push <code>dist</code> folder to <code>gh-pages</code> branch</li>
+<li><strong>AWS S3</strong>: Upload <code>dist</code> folder contents to S3 bucket</li>
+<li><strong>Cloudflare Pages</strong>: Connect repository and set build command</li>
+</ul>
+<h2 id="%F0%9F%93%81-project-structure">📁 Project Structure</h2>
+<pre class="hljs"><code><div>portfolio/
+├── public/
+│   └── resume.pdf              # Resume file for download
+├── src/
+│   ├── components/             # React components
+│   │   ├── ui/                # Reusable UI components
+│   │   │   ├── Button.tsx
+│   │   │   ├── Card.tsx
+│   │   │   ├── Section.tsx
+│   │   │   └── ThemeToggle.tsx
+│   │   ├── About.tsx
+│   │   ├── Achievements.tsx
+│   │   ├── Contact.tsx
+│   │   ├── Experience.tsx
+│   │   ├── Footer.tsx
+│   │   ├── Hero.tsx
+│   │   ├── Navbar.tsx
+│   │   ├── Projects.tsx
+│   │   └── Skills.tsx
+│   ├── data/
+│   │   └── portfolio.ts       # Portfolio data and content
+│   ├── hooks/
+│   │   └── useTheme.ts        # Theme management hook
+│   ├── types/
+│   │   └── index.ts           # TypeScript type definitions
+│   ├── App.tsx                # Main app component
+│   ├── main.tsx               # App entry point
+│   └── index.css              # Global styles &amp; Tailwind imports
+├── index.html                 # HTML template
+├── package.json               # Dependencies and scripts
+├── tsconfig.json              # TypeScript configuration
+├── tailwind.config.js         # TailwindCSS configuration
+├── vite.config.ts             # Vite configuration
+└── README.md                  # This file
+</div></code></pre>
+<h2 id="%F0%9F%8E%A8-customization">🎨 Customization</h2>
+<h3 id="update-portfolio-content">Update Portfolio Content</h3>
+<p>Edit the data in <code>src/data/portfolio.ts</code>:</p>
+<pre class="hljs"><code><div><span class="hljs-keyword">export</span> <span class="hljs-keyword">const</span> portfolioData: PortfolioData = {
+  name: <span class="hljs-string">'Your Name'</span>,
+  title: <span class="hljs-string">'Your Title'</span>,
+  <span class="hljs-comment">// ... update with your information</span>
+};
+</div></code></pre>
+<h3 id="modify-colors">Modify Colors</h3>
+<p>Update the color scheme in <code>tailwind.config.js</code>:</p>
+<pre class="hljs"><code><div>colors: {
+  <span class="hljs-attr">primary</span>: {
+    <span class="hljs-comment">// Your custom color palette</span>
+  },
+}
+</div></code></pre>
+<h3 id="addremove-sections">Add/Remove Sections</h3>
+<p>Edit <code>src/App.tsx</code> to add or remove sections as needed.</p>
+<h2 id="%F0%9F%94%A7-available-scripts">🔧 Available Scripts</h2>
+<ul>
+<li><code>npm run dev</code> - Start development server</li>
+<li><code>npm run build</code> - Build for production</li>
+<li><code>npm run preview</code> - Preview production build locally</li>
+<li><code>npm run lint</code> - Run ESLint for code quality</li>
+</ul>
+<h2 id="%F0%9F%8C%90-browser-support">🌐 Browser Support</h2>
+<ul>
+<li>Chrome (latest)</li>
+<li>Firefox (latest)</li>
+<li>Safari (latest)</li>
+<li>Edge (latest)</li>
+</ul>
+<h2 id="%F0%9F%93%9D-seo-best-practices">📝 SEO Best Practices</h2>
+<p>The portfolio includes:</p>
+<ul>
+<li>Semantic HTML5 elements</li>
+<li>Meta tags for social media sharing (Open Graph, Twitter Cards)</li>
+<li>Optimized images and lazy loading</li>
+<li>Sitemap and robots.txt ready</li>
+<li>Fast load times (&lt; 3s on 3G)</li>
+</ul>
+<h2 id="%E2%99%BF-accessibility">♿ Accessibility</h2>
+<ul>
+<li>WCAG 2.1 Level AA compliant</li>
+<li>Keyboard navigation support</li>
+<li>Screen reader friendly</li>
+<li>Proper ARIA labels and roles</li>
+<li>Sufficient color contrast ratios</li>
+</ul>
+<h2 id="%F0%9F%93%84-license">📄 License</h2>
+<p>This project is open source and available under the MIT License.</p>
+<h2 id="%F0%9F%A4%9D-contributing">🤝 Contributing</h2>
+<p>Contributions, issues, and feature requests are welcome!</p>
+<h2 id="%F0%9F%93%A7-contact">📧 Contact</h2>
+<p><strong>Nafisa Tabassum</strong></p>
+<ul>
+<li>Email: tnafisa18@gmail.com</li>
+<li>GitHub: <a href="https://github.com/Mussabat">@Mussabat</a></li>
+<li>LinkedIn: <a href="https://www.linkedin.com/in/nafisa-tabassum-67426621b">Nafisa Tabassum</a></li>
+</ul>
+<hr>
+<p><strong>Built with ❤️ using React, TypeScript, and TailwindCSS</strong></p>
+
+</body>
+
+</html>

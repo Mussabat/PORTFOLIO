@@ -7,7 +7,6 @@ import { About } from './components/About';
 import { Skills } from './components/Skills';
 import { Experience } from './components/Experience';
 import { Projects } from './components/Projects';
-import { GitHubStats } from './components/GitHubStats';
 import { Achievements } from './components/Achievements';
 import { Testimonials } from './components/Testimonials';
 import { Blog } from './components/Blog';
@@ -63,7 +62,6 @@ function App() {
                     <Skills />
                     <Experience />
                     <Projects />
-                    <GitHubStats />
                     <Achievements />
                     <Testimonials />
                     <Blog />
