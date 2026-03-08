@@ -112,6 +112,25 @@ Full-stack software engineer passionate about solving complex problems and build
 5. **Google Code Jam I/O for Women – Rank 381 / 1812** (2022)
    - Competed in prestigious global programming competition, placing in top 25%
 
+6. **12th Position – BdOSN CodeRace** (2022)
+   - International Girls In ICT Day Celebration Contest organized by Bangladesh Open Source Network
+
+7. **11th at National Girls' Programming Contest (NGPC)** (2021)
+   - Team "CUET_Excalibur" competed in NGPC organized by Daffodil International University
+   - Ranklist: https://toph.co/c/ngpc-2021/standings
+
+8. **4th at Ada Lovelace National Girls' Programming Contest** (2021)
+   - Team "CUET_Excalibur" placed 4th in the preliminary round organized by Bangladesh Open Source Network
+   - Ranklist: https://toph.co/c/ada-lovelace-national-girls-2021-preliminary/standings
+
+9. **Board Scholarship Awardee (Ranked 46th)** (2016)
+   - Awarded scholarship in "Talent Pool" category by Board of Intermediate & Secondary Education, Dhaka
+   - For outstanding SSC examination results at Viqarunnisa Noon School and College
+
+10. **Shera Pathok (1st Prize)** (2015)
+    - Awarded 1st prize in national reading program by Bishwo Shahitto Kendro
+    - Selected from 25 lakh students across 14,000 educational institutions through evaluation test
+
 ---
 
 ## 📚 Publications

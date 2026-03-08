@@ -196,6 +196,36 @@ export const portfolioData: PortfolioData = {
                 'Competed in prestigious global programming competition, placing in top 25%',
             year: '2022',
         },
+        {
+            title: '12th Position – BdOSN CodeRace',
+            description:
+                'International Girls In ICT Day Celebration Contest organized by Bangladesh Open Source Network',
+            year: '2022',
+        },
+        {
+            title: "11th at National Girls' Programming Contest (NGPC)",
+            description:
+                'Team "CUET_Excalibur" competed in NGPC organized by Daffodil International University',
+            year: '2021',
+        },
+        {
+            title: "4th at Ada Lovelace National Girls' Programming Contest",
+            description:
+                'Team "CUET_Excalibur" placed 4th in the preliminary round organized by Bangladesh Open Source Network',
+            year: '2021',
+        },
+        {
+            title: 'Board Scholarship Awardee (Ranked 46th)',
+            description:
+                'Awarded scholarship in "Talent Pool" category by Board of Intermediate & Secondary Education, Dhaka for outstanding SSC examination results at Viqarunnisa Noon School and College',
+            year: '2016',
+        },
+        {
+            title: 'Shera Pathok (1st Prize)',
+            description:
+                'Awarded 1st prize in national reading program by Bishwo Shahitto Kendro. Selected from 25 lakh students across 14,000 educational institutions through evaluation test',
+            year: '2015',
+        },
     ],
     publications: [
         {
