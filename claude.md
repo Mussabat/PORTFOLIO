@@ -170,6 +170,27 @@ Full-stack software engineer passionate about solving complex problems and build
 
 ---
 
+## 🤝 Community & Volunteering
+
+### 1. Campus Ambassador - National Girls Programming Contest (NGPC 2019)
+**Period:** Aug 2019 - Oct 2019 (3 months)  
+**Description:** NGPC is a programming contest for the girls of high school and university students. Promoted the event and encouraged participation from female students.
+
+---
+
+### 2. Volunteer - Bangladesh Open Source Network (BdOSN)
+**Period:** Dec 2021 - Feb 2022 (2 months)  
+**Description:** Bangladesh Open Source Network (BdOSN) is a non-profit, voluntary organization dedicated to promoting open source technologies and community engagement.
+
+---
+
+### 3. Open Source Contributor - Hacktoberfest
+**Period:** Oct 2022 (1 month)  
+**Focus:** Science and Technology  
+**Description:** Contributed to open source projects during Hacktoberfest, focusing on Science and Technology initiatives and community-driven development.
+
+---
+
 ## 💼 Featured Projects
 
 ### 1. Kellafotey (Celloscope)
@@ -227,10 +248,11 @@ Full-stack software engineer passionate about solving complex problems and build
 5. **Projects Section** - Interactive cards with filtering (All, Mobile, Backend, Full Stack)
 6. **Achievements Section** - Scholarships, competitions, recognitions
 7. **Publications Section** - Research papers with citation counts and links to PDFs
-8. **Testimonials Section** - Colleague feedback (placeholder)
-9. **Blog Section** - Article cards (placeholder for future content)
-10. **Contact Section** - Professional contact form
-11. **Footer** - Quick links and social media
+8. **Volunteering Section** - Community engagement and volunteer work
+9. **Testimonials Section** - Colleague feedback (placeholder)
+10. **Blog Section** - Article cards (placeholder for future content)
+11. **Contact Section** - Professional contact form
+12. **Footer** - Quick links and social media
 
 ### Design Features
 - **Loading Animation:** Initial loading screen with progress bar
@@ -279,7 +301,8 @@ portfolio/
 │   │   ├── Projects.tsx
 │   │   ├── Publications.tsx
 │   │   ├── Skills.tsx
-│   │   └── Testimonials.tsx
+│   │   ├── Testimonials.tsx
+│   │   └── Volunteering.tsx
 │   ├── data/
 │   │   └── portfolio.ts        # All content data
 │   ├── hooks/
@@ -399,6 +422,9 @@ npm run lint         # Run ESLint
 - ✅ Added links to Google Scholar and PDF versions
 - ✅ Created Publications.tsx component with rich UI
 - ✅ Updated portfolio data model to include publications
+- ✅ Added Volunteering section with 3 community contributions
+- ✅ Created Volunteering.tsx component with heart icons and cards
+- ✅ Showcasing community engagement from 2019-2022
 
 ---
 

@@ -227,6 +227,26 @@ export const portfolioData: PortfolioData = {
             year: '2015',
         },
     ],
+    volunteering: [
+        {
+            role: 'Campus Ambassador',
+            organization: 'National Girls Programming Contest (NGPC 2019)',
+            period: 'Aug 2019 - Oct 2019',
+            description: 'NGPC is a programming contest for the girls of high school and university students. Promoted the event and encouraged participation from female students.',
+        },
+        {
+            role: 'Volunteer',
+            organization: 'Bangladesh Open Source Network (BdOSN)',
+            period: 'Dec 2021 - Feb 2022',
+            description: 'Bangladesh Open Source Network (BdOSN) is a non-profit, voluntary organization dedicated to promoting open source technologies and community engagement.',
+        },
+        {
+            role: 'Open Source Contributor',
+            organization: 'Hacktoberfest',
+            period: 'Oct 2022',
+            description: 'Contributed to open source projects during Hacktoberfest, focusing on Science and Technology initiatives and community-driven development.',
+        },
+    ],
     publications: [
         {
             title: 'Sandalphon@DravidianLangTech-EACL2024: Hate and offensive language detection in Telugu code-mixed text using transliteration-augmentation',

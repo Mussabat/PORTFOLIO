@@ -40,6 +40,13 @@ export interface Achievement {
     year?: string;
 }
 
+export interface Volunteer {
+    role: string;
+    organization: string;
+    period: string;
+    description: string;
+}
+
 export interface Publication {
     title: string;
     authors: string;
@@ -64,5 +71,6 @@ export interface PortfolioData {
     experiences: Experience[];
     projects: Project[];
     achievements: Achievement[];
+    volunteering: Volunteer[];
     publications: Publication[];
 }
