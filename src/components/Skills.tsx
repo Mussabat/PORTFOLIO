@@ -61,14 +61,26 @@ export const Skills: React.FC = () => {
                                     <motion.div
                                         key={skill.name}
                                         variants={item}
-                                        whileHover={{ x: 5 }}
+                                        whileHover={{ x: 8, scale: 1.05 }}
+                                        transition={{
+                                            type: 'spring',
+                                            stiffness: 300,
+                                            damping: 20,
+                                        }}
                                         className="flex items-center gap-3 group cursor-pointer"
                                     >
                                         {Icon && (
                                             <motion.div
-                                                whileHover={{ rotate: 360, scale: 1.2 }}
-                                                transition={{ duration: 0.5 }}
-                                                className="p-2 bg-primary-50 dark:bg-primary-900/20 rounded-lg text-primary-600 dark:text-primary-400"
+                                                whileHover={{
+                                                    rotate: [0, -10, 10, -10, 0],
+                                                    scale: 1.3,
+                                                }}
+                                                transition={{
+                                                    duration: 0.5,
+                                                    type: 'spring',
+                                                    stiffness: 200,
+                                                }}
+                                                className="p-2 bg-primary-50 dark:bg-primary-900/20 rounded-lg text-primary-600 dark:text-primary-400 group-hover:bg-primary-100 dark:group-hover:bg-primary-900/40 transition-colors"
                                             >
                                                 <Icon size={24} />
                                             </motion.div>

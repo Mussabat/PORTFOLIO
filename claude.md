@@ -439,6 +439,16 @@ npm run lint         # Run ESLint
 - ✅ Updated Blog section to feature single Medium article
 - ✅ Changed Blog layout to centered single-column design for better presentation
 
+### Major UI/UX Enhancements (March 14, 2026) - Top 0.3% Portfolio Upgrades:
+- ✅ **Hero Section Personality**: Changed from formal introduction to engaging "Hi, I'm Nafisa 👋" with animated, pulsing keywords
+- ✅ **Storytelling Copy**: Added "I build scalable, production-ready systems across mobile, web & backend 🚀" with animated emphasis
+- ✅ **Enhanced Button Interactions**: Upgraded to spring-based animations with lift effect (scale 1.05, y: -2)
+- ✅ **Advanced Skill Animations**: Icons now wiggle and scale on hover with spring physics
+- ✅ **Gradient Mesh Background**: Added animated gradient orbs in About section for depth and movement
+- ✅ **Improved Typography**: Larger text sizes (text-xl, text-2xl) with better hierarchy
+- ✅ **Interactive Highlight Card**: GGS achievement card now scales and lifts on hover with emoji
+- ✅ **Micro-interactions**: Spring-based physics for natural, delightful interactions throughout
+
 ---
 
 ## 🎯 Future Enhancements

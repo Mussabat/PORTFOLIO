@@ -5,7 +5,7 @@ import { portfolioData } from '../data/portfolio';
 import { Button } from './ui/Button';
 
 export const Hero: React.FC = () => {
-    const { name, title, location, summary, socials, resumeUrl } = portfolioData;
+    const { name, location, summary, socials, resumeUrl } = portfolioData;
 
     const container = {
         hidden: { opacity: 0 },
@@ -70,17 +70,51 @@ export const Hero: React.FC = () => {
 
                 <motion.h1
                     variants={item}
-                    className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-6"
+                    className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
                 >
-                    {name}
+                    <span className="block">Hi, I'm {name.split(' ')[0]} 👋</span>
                 </motion.h1>
 
-                <motion.h2
+                <motion.div
                     variants={item}
-                    className="text-2xl sm:text-3xl md:text-4xl text-primary-600 dark:text-primary-400 font-semibold mb-8"
+                    className="text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-300 font-medium mb-8 leading-relaxed"
                 >
-                    {title}
-                </motion.h2>
+                    <p className="mb-4">
+                        I build{' '}
+                        <motion.span
+                            className="text-primary-600 dark:text-primary-400 font-bold inline-block"
+                            animate={{
+                                scale: [1, 1.05, 1],
+                            }}
+                            transition={{
+                                duration: 2,
+                                repeat: Infinity,
+                                ease: 'easeInOut',
+                            }}
+                        >
+                            scalable
+                        </motion.span>
+                        ,{' '}
+                        <motion.span
+                            className="text-primary-600 dark:text-primary-400 font-bold inline-block"
+                            animate={{
+                                scale: [1, 1.05, 1],
+                            }}
+                            transition={{
+                                duration: 2,
+                                delay: 0.3,
+                                repeat: Infinity,
+                                ease: 'easeInOut',
+                            }}
+                        >
+                            production-ready
+                        </motion.span>{' '}
+                        systems
+                    </p>
+                    <p className="text-xl sm:text-2xl">
+                        across mobile, web & backend 🚀
+                    </p>
+                </motion.div>
 
                 <motion.p
                     variants={item}
