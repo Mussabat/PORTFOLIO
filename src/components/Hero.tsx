@@ -101,19 +101,11 @@ export const Hero: React.FC = () => {
                         <FiDownload className="group-hover:animate-bounce" />
                         Download Resume
                     </Button>
-
-                    <Button
-                        onClick={() => window.open(`mailto:${portfolioData.email}`)}
-                        variant="outline"
-                        size="lg"
-                    >
-                        Get In Touch
-                    </Button>
                 </motion.div>
 
                 <motion.div
                     variants={item}
-                    className="flex items-center justify-center gap-6"
+                    className="flex items-center justify-center gap-6 mb-20"
                 >
                     {socials.map((social) => {
                         const Icon = social.icon;
@@ -137,7 +129,7 @@ export const Hero: React.FC = () => {
                 <motion.button
                     variants={item}
                     onClick={scrollToAbout}
-                    className="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                    className="absolute bottom-4 left-1/2 transform -translate-x-1/2 text-gray-400 dark:text-gray-500 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                     animate={{ y: [0, 10, 0] }}
                     transition={{ duration: 2, repeat: Infinity }}
                 >
