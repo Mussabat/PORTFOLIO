@@ -9,15 +9,15 @@ export const Testimonials: React.FC = () => {
             name: 'Engineering Manager',
             role: 'Celloscope',
             content:
-                'Exceptional engineer who consistently delivers high-quality code. Her contributions to our microservices architecture and frontend development have been invaluable.',
+                'She likes to take on challenges, solve critical problems, and she demonstrates deep understanding of software fundamentals. She is outstanding in communication.',
             avatar: '👨‍💼',
         },
         {
             name: 'Tech Lead',
             role: 'Project Collaborator',
             content:
-                'Nafisa is a quick learner with strong problem-solving skills. She successfully led the frontend development across multiple platforms while maintaining excellent code quality.',
-            avatar: '👩‍💻',
+                'She was always punctual, well-prepared for meetings, and very clear in understanding requirements, which helped her consistently deliver quality work on time. Her enthusiasm for learning new technologies and improving her skills truly stood out.',
+            avatar: '👨‍💼',
         },
         {
             name: 'Product Manager',

@@ -12,7 +12,6 @@ import { Publications } from './components/Publications';
 import { Volunteering } from './components/Volunteering';
 import { Testimonials } from './components/Testimonials';
 import { Blog } from './components/Blog';
-import { Contact } from './components/Contact';
 import { Footer } from './components/Footer';
 import { portfolioData } from './data/portfolio';
 
@@ -69,7 +68,6 @@ function App() {
                     <Volunteering />
                     <Testimonials />
                     <Blog />
-                    <Contact />
                 </main>
                 <Footer />
             </div>
