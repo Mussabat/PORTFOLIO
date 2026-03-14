@@ -6,31 +6,14 @@ import { Section } from './ui/Section';
 export const Blog: React.FC = () => {
     const blogPosts = [
         {
-            title: 'Building Scalable Microservices with Spring Boot',
+            title: 'GGS is a Scholarship Opportunity That is Awarded Every Year to Aspiring Female Students',
             excerpt:
-                'A deep dive into designing and implementing microservices architecture for production systems...',
-            date: '2026-02-15',
-            readTime: '8 min read',
-            category: 'Backend',
-            image: '🏗️',
-        },
-        {
-            title: 'State Management in Flutter: BLoC vs Riverpod',
-            excerpt:
-                'Comparing different state management solutions and when to use each approach in Flutter applications...',
-            date: '2026-01-28',
-            readTime: '6 min read',
-            category: 'Mobile',
-            image: '📱',
-        },
-        {
-            title: 'CI/CD Best Practices for Modern Development',
-            excerpt:
-                'How we reduced deployment time by 70% using automated pipelines and infrastructure as code...',
-            date: '2025-12-10',
-            readTime: '10 min read',
-            category: 'DevOps',
-            image: '🚀',
+                'My journey and experience with the Generation Google Scholarship program - a life-changing opportunity for women in technology across the Asia-Pacific region...',
+            date: '2024-03-15',
+            readTime: '5 min read',
+            category: 'Career',
+            image: '🎓',
+            url: 'https://medium.com/@tnafisa18/ggs-is-a-scholarship-opportunity-that-is-awarded-every-year-to-aspiring-female-students-354853c24ffd',
         },
     ];
 
@@ -41,7 +24,7 @@ export const Blog: React.FC = () => {
             subtitle="Sharing knowledge and experiences from the field"
             className="bg-gray-50 dark:bg-gray-800"
         >
-            <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div className="max-w-2xl mx-auto">
                 {blogPosts.map((post, index) => (
                     <motion.article
                         key={index}
@@ -50,6 +33,7 @@ export const Blog: React.FC = () => {
                         viewport={{ once: true }}
                         transition={{ duration: 0.5, delay: index * 0.1 }}
                         whileHover={{ y: -8 }}
+                        onClick={() => window.open(post.url, '_blank')}
                         className="bg-white dark:bg-gray-900 rounded-xl overflow-hidden shadow-lg border border-gray-200 dark:border-gray-700 cursor-pointer group"
                     >
                         <div className="h-48 bg-gradient-to-br from-primary-400 to-primary-600 flex items-center justify-center text-6xl">

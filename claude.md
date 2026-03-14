@@ -250,9 +250,8 @@ Full-stack software engineer passionate about solving complex problems and build
 7. **Publications Section** - Research papers with citation counts and links to PDFs
 8. **Volunteering Section** - Community engagement and volunteer work
 9. **Testimonials Section** - Colleague feedback (placeholder)
-10. **Blog Section** - Article cards (placeholder for future content)
-11. **Contact Section** - Professional contact form
-12. **Footer** - Quick links and social media
+10. **Blog Section** - Featured Medium article about Generation Google Scholarship
+11. **Footer** - Quick links and social media
 
 ### Design Features
 - **Loading Animation:** Initial loading screen with progress bar
@@ -412,9 +411,15 @@ npm run lint         # Run ESLint
 
 ### Active Placeholder Content:
 - Resume PDF needs to be replaced with actual file
-- Blog section is placeholder (ready for future content)
 - Testimonials section is placeholder (can be customized)
 - Project screenshots not yet added (using gradient placeholders)
+
+### Blog Content:
+- Published article: "GGS is a Scholarship Opportunity That is Awarded Every Year to Aspiring Female Students"
+- Medium URL: https://medium.com/@tnafisa18/ggs-is-a-scholarship-opportunity-that-is-awarded-every-year-to-aspiring-female-students-354853c24ffd
+- Published: March 15, 2024
+- Category: Career
+- Layout: Centered single-column design for professional presentation
 
 ### Recent Updates (March 8, 2026):
 - ✅ Added Publications section with 3 research papers
@@ -425,6 +430,14 @@ npm run lint         # Run ESLint
 - ✅ Added Volunteering section with 3 community contributions
 - ✅ Created Volunteering.tsx component with heart icons and cards
 - ✅ Showcasing community engagement from 2019-2022
+
+### Recent Updates (March 14, 2026):
+- ✅ Removed Contact/Get In Touch section
+- ✅ Removed "Get In Touch" button from Hero section
+- ✅ Adjusted arrow button positioning in Hero section
+- ✅ Added icons to all skills (Microservices, REST APIs, State Management, API Integration, CI/CD, Agile)
+- ✅ Updated Blog section to feature single Medium article
+- ✅ Changed Blog layout to centered single-column design for better presentation
 
 ---
 

@@ -20,6 +20,7 @@ import {
     SiPostgresql,
     SiReact,
 } from 'react-icons/si';
+import { FiServer, FiGlobe, FiLayers, FiRefreshCw, FiTrendingUp } from 'react-icons/fi';
 import { PortfolioData } from '../types';
 
 export const portfolioData: PortfolioData = {
@@ -70,8 +71,8 @@ export const portfolioData: PortfolioData = {
             skills: [
                 { name: 'Spring Boot', icon: SiSpringboot },
                 { name: 'FastAPI', icon: SiFastapi },
-                { name: 'Microservices' },
-                { name: 'REST APIs' },
+                { name: 'Microservices', icon: FiServer },
+                { name: 'REST APIs', icon: FiGlobe },
             ],
         },
         {
@@ -79,8 +80,8 @@ export const portfolioData: PortfolioData = {
             skills: [
                 { name: 'Flutter', icon: SiFlutter },
                 { name: 'React', icon: SiReact },
-                { name: 'State Management' },
-                { name: 'API Integration' },
+                { name: 'State Management', icon: FiLayers },
+                { name: 'API Integration', icon: FiRefreshCw },
             ],
         },
         {
@@ -88,7 +89,7 @@ export const portfolioData: PortfolioData = {
             skills: [
                 { name: 'Docker', icon: FaDocker },
                 { name: 'AWS', icon: FaAws },
-                { name: 'CI/CD' },
+                { name: 'CI/CD', icon: FiRefreshCw },
                 { name: 'Linux', icon: FaLinux },
             ],
         },
@@ -97,7 +98,7 @@ export const portfolioData: PortfolioData = {
             skills: [
                 { name: 'PostgreSQL', icon: SiPostgresql },
                 { name: 'Git', icon: FaGitAlt },
-                { name: 'Agile' },
+                { name: 'Agile', icon: FiTrendingUp },
             ],
         },
     ],
