@@ -32,7 +32,7 @@ export const portfolioData: PortfolioData = {
     about: [
         "I'm a full-stack software engineer with a passion for building scalable, production-ready systems that solve real-world problems. Currently based in London with full UK work authorisation, I bring experience across mobile, web, and backend development.",
         "At Celloscope, I've contributed to multiple production platforms, including a health platform showcased at CES and an AI-driven interview screening system. I led frontend development across Android, iOS, and web, built 85% of reusable UI components, and contributed to ~39% of backend services using microservices architecture.",
-        "I'm particularly proud of being selected as a Generation Google Scholar — the only Bangladeshi woman among 15,000+ applicants across Asia-Pacific. I've also competed internationally, earning 1st and 2nd place finishes at DravidianLangTech@EACL 2024.",
+        "I'm particularly proud of being selected as a Generation Google Scholar the only Bangladeshi woman among 15,000+ applicants across Asia-Pacific. I've also competed internationally, earning 1st and 2nd place finishes at DravidianLangTech@EACL 2024.",
         'Beyond building features, I care deeply about engineering excellence: implementing CI/CD pipelines that reduced deployment time by 70%, improving code maintainability to cut development time by 19%, and integrating AWS services that send 1000+ daily notifications reliably.',
     ],
     email: 'tnafisa18@gmail.com',
