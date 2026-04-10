@@ -3,9 +3,10 @@ import { motion } from 'framer-motion';
 import { FiDownload, FiArrowDown } from 'react-icons/fi';
 import { portfolioData } from '../data/portfolio';
 import { Button } from './ui/Button';
+import { EmailPopover } from './ui/EmailPopover';
 
 export const Hero: React.FC = () => {
-    const { name, location, summary, socials, resumeUrl } = portfolioData;
+    const { name, location, summary, socials, resumeUrl, email } = portfolioData;
 
     const container = {
         hidden: { opacity: 0 },
@@ -143,6 +144,20 @@ export const Hero: React.FC = () => {
                 >
                     {socials.map((social) => {
                         const Icon = social.icon;
+
+                        if (social.name === 'Email') {
+                            return (
+                                <EmailPopover
+                                    key={social.name}
+                                    email={email}
+                                    icon={Icon}
+                                    iconSize={24}
+                                    buttonClassName="p-3 bg-white dark:bg-gray-800 rounded-full shadow-lg hover:shadow-xl transition-shadow text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400"
+                                    popupClassName="absolute left-1/2 top-full z-20 mt-4 w-72 -translate-x-1/2 rounded-2xl border border-gray-200 bg-white p-4 text-left shadow-2xl dark:border-gray-700 dark:bg-gray-900"
+                                />
+                            );
+                        }
+
                         return (
                             <motion.a
                                 key={social.name}

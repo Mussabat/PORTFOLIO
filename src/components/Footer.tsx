@@ -2,13 +2,17 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { FiHeart } from 'react-icons/fi';
 import { portfolioData } from '../data/portfolio';
+import { EmailPopover } from './ui/EmailPopover';
 
 export const Footer: React.FC = () => {
-    const { name, socials } = portfolioData;
+    const { name, socials, email } = portfolioData;
     const currentYear = new Date().getFullYear();
 
     return (
-        <footer className="bg-gray-900 dark:bg-black text-white py-12 px-4 sm:px-6 lg:px-8">
+        <footer
+            id="contact"
+            className="bg-gray-900 dark:bg-black text-white py-12 px-4 sm:px-6 lg:px-8"
+        >
             <div className="max-w-7xl mx-auto">
                 <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
                     {/* Brand */}
@@ -48,6 +52,20 @@ export const Footer: React.FC = () => {
                         <div className="flex gap-4">
                             {socials.map((social) => {
                                 const Icon = social.icon;
+
+                                if (social.name === 'Email') {
+                                    return (
+                                        <EmailPopover
+                                            key={social.name}
+                                            email={email}
+                                            icon={Icon}
+                                            iconSize={20}
+                                            buttonClassName="p-3 bg-gray-800 rounded-lg hover:bg-primary-600 transition-colors"
+                                            popupClassName="absolute bottom-full right-0 z-20 mb-4 w-72 rounded-2xl border border-gray-700 bg-gray-900 p-4 text-left shadow-2xl"
+                                        />
+                                    );
+                                }
+
                                 return (
                                     <motion.a
                                         key={social.name}
