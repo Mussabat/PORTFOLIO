@@ -36,7 +36,7 @@ export const portfolioData: PortfolioData = {
         'Beyond building features, I care deeply about engineering excellence: implementing CI/CD pipelines that reduced deployment time by 70%, improving code maintainability to cut development time by 19%, and integrating AWS services that send 1000+ daily notifications reliably.',
     ],
     email: 'tnafisa18@gmail.com',
-    resumeUrl: '/resume.pdf',
+    resumeUrl: 'https://drive.google.com/file/d/1V_Gdhcf5evR0ooWCRPCx-X0POENJRuJN/view',
     socials: [
         {
             name: 'GitHub',
