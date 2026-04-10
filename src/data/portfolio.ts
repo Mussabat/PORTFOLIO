@@ -30,7 +30,7 @@ export const portfolioData: PortfolioData = {
     summary:
         'Full-stack software engineer passionate about solving complex problems and building scalable production systems across mobile, web, and backend.',
     about: [
-        "I'm a full-stack software engineer with a passion for building scalable, production-ready systems that solve real-world problems. Currently based in London with full UK work authorization, I bring experience across mobile, web, and backend development.",
+        "I'm a full-stack software engineer with a passion for building scalable, production-ready systems that solve real-world problems. Currently based in London with full UK work authorisation, I bring experience across mobile, web, and backend development.",
         "At Celloscope, I've contributed to multiple production platforms, including a health platform showcased at CES and an AI-driven interview screening system. I led frontend development across Android, iOS, and web, built 85% of reusable UI components, and contributed to ~39% of backend services using microservices architecture.",
         "I'm particularly proud of being selected as a Generation Google Scholar — the only Bangladeshi woman among 15,000+ applicants across Asia-Pacific. I've also competed internationally, earning 1st and 2nd place finishes at DravidianLangTech@EACL 2024.",
         'Beyond building features, I care deeply about engineering excellence: implementing CI/CD pipelines that reduced deployment time by 70%, improving code maintainability to cut development time by 19%, and integrating AWS services that send 1000+ daily notifications reliably.',
@@ -136,7 +136,7 @@ export const portfolioData: PortfolioData = {
         {
             title: 'Primefocus Health',
             description:
-                'Mobile health platform (iOS & Android) showcased at CES, launched within 7 months. Led development of core screens, implemented push notifications, and optimized performance for production release at a major tech event.',
+                'Mobile health platform (iOS & Android) showcased at CES, launched within 7 months. Led development of core screens, implemented push notifications, and optimised performance for production release at a major tech event.',
             techStack: ['Flutter', 'Push Notifications', 'REST APIs', 'State Management'],
             liveUrl: 'https://apps.apple.com/us/app/primefocus-health/id6748019074',
             category: 'Mobile',
@@ -200,19 +200,19 @@ export const portfolioData: PortfolioData = {
         {
             title: '12th Position – BdOSN CodeRace',
             description:
-                'International Girls In ICT Day Celebration Contest organized by Bangladesh Open Source Network',
+                'International Girls In ICT Day Celebration Contest organised by Bangladesh Open Source Network',
             year: '2022',
         },
         {
             title: "11th at National Girls' Programming Contest (NGPC)",
             description:
-                'Team "CUET_Excalibur" competed in NGPC organized by Daffodil International University',
+                'Team "CUET_Excalibur" competed in NGPC organised by Daffodil International University',
             year: '2021',
         },
         {
             title: "4th at Ada Lovelace National Girls' Programming Contest",
             description:
-                'Team "CUET_Excalibur" placed 4th in the preliminary round organized by Bangladesh Open Source Network',
+                'Team "CUET_Excalibur" placed 4th in the preliminary round organised by Bangladesh Open Source Network',
             year: '2021',
         },
         {
@@ -224,7 +224,7 @@ export const portfolioData: PortfolioData = {
         {
             title: 'Shera Pathok (1st Prize)',
             description:
-                'Awarded 1st prize in national reading program by Bishwo Shahitto Kendro. Selected from 25 lakh students across 14,000 educational institutions through evaluation test',
+                'Awarded 1st prize in a national reading programme by Bishwo Shahitto Kendro. Selected from 25 lakh students across 14,000 educational institutions through evaluation test',
             year: '2015',
         },
     ],
@@ -239,7 +239,7 @@ export const portfolioData: PortfolioData = {
             role: 'Volunteer',
             organization: 'Bangladesh Open Source Network (BdOSN)',
             period: 'Dec 2021 - Feb 2022',
-            description: 'Bangladesh Open Source Network (BdOSN) is a non-profit, voluntary organization dedicated to promoting open source technologies and community engagement.',
+            description: 'Bangladesh Open Source Network (BdOSN) is a non-profit, voluntary organisation dedicated to promoting open source technologies and community engagement.',
         },
         {
             role: 'Open Source Contributor',

@@ -8,7 +8,7 @@ export const Blog: React.FC = () => {
         {
             title: 'GGS is a Scholarship Opportunity That is Awarded Every Year to Aspiring Female Students',
             excerpt:
-                'My journey and experience with the Generation Google Scholarship program - a life-changing opportunity for women in technology across the Asia-Pacific region...',
+                'My journey and experience with the Generation Google Scholarship programme - a life-changing opportunity for women in technology across the Asia-Pacific region...',
             date: '2024-03-15',
             readTime: '5 min read',
             category: 'Career',
@@ -59,7 +59,7 @@ export const Blog: React.FC = () => {
                                 <div className="flex items-center gap-4">
                                     <span className="flex items-center gap-1">
                                         <FiCalendar size={14} />
-                                        {new Date(post.date).toLocaleDateString('en-US', {
+                                        {new Date(post.date).toLocaleDateString('en-GB', {
                                             month: 'short',
                                             day: 'numeric',
                                         })}

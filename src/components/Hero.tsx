@@ -65,7 +65,7 @@ export const Hero: React.FC = () => {
             >
                 <motion.div variants={item} className="mb-6">
                     <span className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium mb-6">
-                        {location} • Full UK Work Authorization
+                        {location} • Full UK Work Authorisation
                     </span>
                 </motion.div>
 
