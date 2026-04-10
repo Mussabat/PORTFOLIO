@@ -40,7 +40,7 @@ export const About: React.FC = () => {
                     className="mt-12 p-8 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-2xl border-2 border-primary-200 dark:border-primary-700 shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
                 >
                     <p className="text-xl font-semibold text-primary-900 dark:text-primary-100 text-center leading-relaxed">
-                        💫 Generation Google Scholar — the only Bangladeshi woman selected among 15,000+ applicants across Asia-Pacific
+                        💫 Generation Google Scholar the only Bangladeshi woman selected among 15,000+ applicants across Asia-Pacific
                     </p>
                 </motion.div>
             </div>
