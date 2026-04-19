@@ -23,7 +23,6 @@ export const Projects: React.FC = () => {
         <Section
             id="projects"
             title="Featured Projects"
-            subtitle="Personal projects demonstrating full-stack capabilities"
             className="bg-gray-50 dark:bg-gray-800"
         >
             {/* Filter Buttons */}
