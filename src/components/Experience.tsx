@@ -11,10 +11,11 @@ export const Experience: React.FC = () => {
         <Section
             id="experience"
             title="Professional Experience"
-            subtitle="Building impactful solutions in production environments"
             className="bg-white dark:bg-gray-900"
         >
-            <div className="max-w-5xl mx-auto">
+            <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-start">
+                {/* Timeline */}
+                <div className="flex-1">
                 {experiences.map((exp, index) => (
                     <motion.div
                         key={index}
@@ -22,21 +23,12 @@ export const Experience: React.FC = () => {
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
                         transition={{ duration: 0.6, delay: index * 0.2 }}
-                        className="relative pl-8 pb-12 border-l-2 border-primary-300 dark:border-primary-700 last:pb-0"
+                        className="relative pl-2 pb-10 last:pb-0"
                     >
-                        {/* Timeline dot */}
-                        <motion.div
-                            initial={{ scale: 0 }}
-                            whileInView={{ scale: 1 }}
-                            viewport={{ once: true }}
-                            transition={{ duration: 0.4, delay: 0.2 }}
-                            className="absolute -left-3 top-0 w-6 h-6 bg-primary-600 dark:bg-primary-500 rounded-full border-4 border-white dark:border-gray-900"
-                        />
-
                         <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow">
                             <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
                                 <div>
-                                    <h3 className="text-2xl font-bold text-gray-900 dark:text-white mb-2">
+                                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
                                         {exp.title}
                                     </h3>
                                     <div className="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400">
@@ -69,7 +61,7 @@ export const Experience: React.FC = () => {
                                         className="flex items-start gap-3"
                                     >
                                         <div className="mt-2 w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full flex-shrink-0" />
-                                        <p className="text-gray-700 dark:text-gray-300 leading-relaxed">
+                                        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
                                             {responsibility}
                                         </p>
                                     </motion.div>
@@ -78,6 +70,22 @@ export const Experience: React.FC = () => {
                         </div>
                     </motion.div>
                 ))}
+                </div>
+
+                {/* Right Illustration */}
+                <motion.div
+                    initial={{ opacity: 0, x: 40 }}
+                    whileInView={{ opacity: 1, x: 0 }}
+                    viewport={{ once: true }}
+                    transition={{ duration: 0.7 }}
+                    className="lg:w-[360px] w-full flex-shrink-0 hidden lg:flex items-center justify-center"
+                >
+                    <img
+                        src="/experience-illustration-right.svg"
+                        alt="Code snippets illustration"
+                        className="w-full"
+                    />
+                </motion.div>
             </div>
         </Section>
     );

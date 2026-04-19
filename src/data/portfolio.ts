@@ -106,7 +106,7 @@ export const portfolioData: PortfolioData = {
         {
             title: 'Junior Software Engineer',
             company: 'Celloscope',
-            location: 'Remote',
+            location: 'Hybrid',
             period: 'July 2024 – January 2026',
             responsibilities: [
                 'Built production mobile and web platforms including a health platform showcased at CES',
