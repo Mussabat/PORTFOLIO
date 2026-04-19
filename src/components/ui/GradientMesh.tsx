@@ -15,7 +15,7 @@ export function GradientMesh() {
                     repeat: Infinity,
                     ease: 'linear',
                 }}
-                className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-primary-400/40 to-purple-400/40 rounded-full blur-3xl"
+                className="absolute top-0 left-1/4 w-96 h-96 bg-gradient-to-r from-primary-500/60 to-accent-400/60 rounded-full blur-3xl"
             />
             <motion.div
                 animate={{
@@ -29,7 +29,7 @@ export function GradientMesh() {
                     repeat: Infinity,
                     ease: 'linear',
                 }}
-                className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-blue-400/40 to-primary-400/40 rounded-full blur-3xl"
+                className="absolute bottom-0 right-1/4 w-96 h-96 bg-gradient-to-l from-accent-500/50 to-primary-400/50 rounded-full blur-3xl"
             />
             <motion.div
                 animate={{
@@ -42,7 +42,7 @@ export function GradientMesh() {
                     repeat: Infinity,
                     ease: 'easeInOut',
                 }}
-                className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-br from-purple-400/30 to-pink-400/30 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"
+                className="absolute top-1/2 left-1/2 w-72 h-72 bg-gradient-to-br from-primary-400/50 to-accent-500/50 rounded-full blur-3xl transform -translate-x-1/2 -translate-y-1/2"
             />
         </div>
     );

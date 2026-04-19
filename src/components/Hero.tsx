@@ -28,7 +28,7 @@ export const Hero: React.FC = () => {
     };
 
     return (
-        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-gray-50 via-white to-primary-50 dark:from-gray-900 dark:via-gray-900 dark:to-gray-800">
+        <section className="min-h-screen flex items-center justify-center px-4 sm:px-6 lg:px-8 relative overflow-hidden bg-gradient-to-br from-primary-50 via-white to-accent-300/20 dark:from-gray-950 dark:via-gray-900 dark:to-primary-900/40">
             {/* Animated background elements */}
             <div className="absolute inset-0 overflow-hidden pointer-events-none">
                 <motion.div
@@ -41,7 +41,7 @@ export const Hero: React.FC = () => {
                         repeat: Infinity,
                         ease: 'linear',
                     }}
-                    className="absolute -top-40 -right-40 w-96 h-96 bg-primary-200/30 dark:bg-primary-500/10 rounded-full blur-3xl"
+                    className="absolute -top-40 -right-40 w-96 h-96 bg-gradient-to-br from-primary-400/50 to-accent-400/40 dark:from-primary-500/30 dark:to-accent-500/20 rounded-full blur-3xl"
                 />
                 <motion.div
                     animate={{
@@ -53,7 +53,7 @@ export const Hero: React.FC = () => {
                         repeat: Infinity,
                         ease: 'linear',
                     }}
-                    className="absolute -bottom-40 -left-40 w-96 h-96 bg-primary-300/20 dark:bg-primary-600/10 rounded-full blur-3xl"
+                    className="absolute -bottom-40 -left-40 w-96 h-96 bg-gradient-to-tr from-accent-400/40 to-primary-400/40 dark:from-accent-500/20 dark:to-primary-600/20 rounded-full blur-3xl"
                 />
             </div>
 
@@ -64,7 +64,7 @@ export const Hero: React.FC = () => {
                 className="max-w-5xl mx-auto text-center relative z-10"
             >
                 <motion.div variants={item} className="mb-6">
-                    <span className="inline-block px-4 py-2 bg-primary-100 dark:bg-primary-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-medium mb-6">
+                    <span className="inline-block px-4 py-2 bg-gradient-to-r from-primary-100 to-accent-300/30 dark:from-primary-900/40 dark:to-accent-900/30 text-primary-700 dark:text-primary-300 rounded-full text-sm font-semibold mb-6 border border-primary-200/50 dark:border-primary-700/50">
                         {location} • Full UK Work Authorisation
                     </span>
                 </motion.div>
