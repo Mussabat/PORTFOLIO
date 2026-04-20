@@ -32,7 +32,6 @@ export const Testimonials: React.FC = () => {
         <Section
             id="testimonials"
             title="Testimonials"
-            subtitle="What colleagues say about working with me"
             className="bg-white dark:bg-gray-900"
         >
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8">

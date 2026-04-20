@@ -13,7 +13,6 @@ export const Achievements: React.FC = () => {
         <Section
             id="achievements"
             title="Achievements & Recognition"
-            subtitle="Awards, scholarships, and competitive programming achievements"
             className="bg-white dark:bg-gray-900 relative overflow-hidden"
         >
             <GradientMesh />

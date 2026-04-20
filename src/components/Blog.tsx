@@ -21,7 +21,6 @@ export const Blog: React.FC = () => {
         <Section
             id="blog"
             title="Latest Articles"
-            subtitle="Sharing knowledge and experiences from the field"
             className="bg-gray-50 dark:bg-gray-800"
         >
             <div className="max-w-2xl mx-auto">

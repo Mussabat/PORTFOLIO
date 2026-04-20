@@ -10,7 +10,6 @@ export function Publications() {
         <Section
             id="publications"
             title="Research Publications"
-            subtitle="Contributions to Natural Language Processing and low-resource language research"
             className="bg-white dark:bg-gray-900 relative overflow-hidden"
         >
             <GradientMesh />

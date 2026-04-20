@@ -10,7 +10,6 @@ export function Volunteering() {
         <Section
             id="volunteering"
             title="Community & Volunteering"
-            subtitle="Contributing to tech communities and empowering future generations"
             className="bg-gray-50 dark:bg-gray-800"
         >
             <div className="max-w-5xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
