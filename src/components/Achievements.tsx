@@ -1,62 +1,61 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { FiAward } from 'react-icons/fi';
-import { BsTrophy } from 'react-icons/bs';
-import { Section } from './ui/Section';
-import { GradientMesh } from './ui/GradientMesh';
 import { portfolioData } from '../data/portfolio';
+
+const FEATURED = new Set([
+    'Generation Google Scholarship',
+    '1st Place – DravidianLangTech@EACL 2024 Shared Task 5',
+]);
 
 export const Achievements: React.FC = () => {
     const { achievements } = portfolioData;
 
     return (
-        <Section
-            id="achievements"
-            title="Achievements & Recognition"
-            className="bg-white dark:bg-gray-900 relative overflow-hidden"
-        >
-            <GradientMesh />
-            <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 relative z-10">
-                {achievements.map((achievement, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 24 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{
-                            duration: 0.45,
-                            delay: index * 0.06,
-                        }}
-                        whileHover={{ y: -4 }}
-                        className="rounded-2xl border border-gray-200 bg-white p-6 shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
-                    >
-                        <div className="flex items-start gap-4">
-                            <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-primary-100 text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">
-                                {index < 2 ? (
-                                    <BsTrophy size={22} />
-                                ) : (
-                                    <FiAward size={22} />
-                                )}
-                            </div>
-                            <div className="flex-1">
-                                <div className="mb-3 flex flex-col gap-2">
-                                    <h3 className="text-lg font-semibold leading-tight text-gray-900 dark:text-white">
-                                        {achievement.title}
-                                    </h3>
-                                    {achievement.year && (
-                                        <span className="inline-flex w-fit items-center rounded-full bg-gray-100 px-3 py-1 text-sm font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300">
+        <section id="achievements" className="border-t border-primary-100 dark:border-primary-900/40 py-16 md:py-28">
+            <div className="max-w-screen-xl mx-auto px-5 lg:px-16">
+                <div>
+
+                    <div>
+                        <h2 className="font-serif text-4xl md:text-5xl lg:text-[clamp(36px,5vw,68px)] leading-[1.05] tracking-[-0.025em] mb-12 max-w-[18ch] text-gray-900 dark:text-white">
+                            Awards, scholarships,{' '}
+                            <em className="italic text-primary-600 dark:text-primary-400">
+                                international podiums.
+                            </em>
+                        </h2>
+
+                        {/* Achievement grid — borders drawn via parent border-t/l, each card border-r/b */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 border-t border-l border-primary-100 dark:border-primary-900/40">
+                            {achievements.map((achievement, index) => {
+                                const isFeatured = FEATURED.has(achievement.title);
+                                return (
+                                    <motion.div
+                                        key={index}
+                                        initial={{ opacity: 0 }}
+                                        whileInView={{ opacity: 1 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.5, delay: index * 0.04 }}
+                                        className={[
+                                            'flex flex-col gap-3 p-7 border-r border-b border-primary-100 dark:border-primary-900/40 min-h-[180px] transition-colors duration-200',
+                                            isFeatured
+                                                ? 'bg-primary-700 dark:bg-primary-800'
+                                                : 'bg-white dark:bg-gray-900 hover:bg-primary-50 dark:hover:bg-primary-900/20',
+                                        ].join(' ')}
+                                    >
+                                        <div className={`font-mono text-[11px] tracking-[0.1em] uppercase ${isFeatured ? 'text-primary-300' : 'text-primary-400 dark:text-primary-500'}`}>
                                             {achievement.year}
-                                        </span>
-                                    )}
-                                </div>
-                                <p className="text-base text-gray-700 dark:text-gray-300 leading-relaxed">
-                                    {achievement.description}
-                                </p>
-                            </div>
+                                        </div>
+                                        <h3 className={`font-serif text-[22px] leading-[1.15] tracking-[-0.01em] m-0 ${isFeatured ? 'text-white' : 'text-gray-900 dark:text-white'}`}>
+                                            {achievement.title}
+                                        </h3>
+                                        <p className={`text-[13px] leading-[1.55] mt-auto ${isFeatured ? 'text-primary-100' : 'text-gray-500 dark:text-gray-400'}`}>
+                                            {achievement.description}
+                                        </p>
+                                    </motion.div>
+                                );
+                            })}
                         </div>
-                    </motion.div>
-                ))}
+                    </div>
+                </div>
             </div>
-        </Section>
+        </section>
     );
 };

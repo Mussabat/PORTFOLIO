@@ -31,6 +31,7 @@ export default {
             fontFamily: {
                 sans: ['Inter', 'system-ui', 'sans-serif'],
                 mono: ['JetBrains Mono', 'monospace'],
+                serif: ['Instrument Serif', 'Georgia', 'serif'],
             },
             animation: {
                 'fade-in': 'fadeIn 0.5s ease-in-out',
