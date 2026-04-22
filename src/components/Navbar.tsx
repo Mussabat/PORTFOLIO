@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { FiMenu, FiX } from 'react-icons/fi';
 import { ThemeToggle } from './ui/ThemeToggle';
@@ -13,14 +13,12 @@ const navItems = [
     { name: 'Contact', href: '#contact' },
 ];
 
-export const Navbar: React.FC = () => {
+export function Navbar() {
     const [isOpen, setIsOpen] = useState(false);
     const [scrolled, setScrolled] = useState(false);
 
     useEffect(() => {
-        const handleScroll = () => {
-            setScrolled(window.scrollY > 50);
-        };
+        const handleScroll = () => setScrolled(window.scrollY > 50);
         window.addEventListener('scroll', handleScroll);
         return () => window.removeEventListener('scroll', handleScroll);
     }, []);
@@ -28,14 +26,9 @@ export const Navbar: React.FC = () => {
     const handleNavClick = (href: string) => {
         setIsOpen(false);
         const element = document.querySelector(href);
-        const offset = 80;
         if (element) {
-            const elementPosition = element.getBoundingClientRect().top;
-            const offsetPosition = elementPosition + window.pageYOffset - offset;
-            window.scrollTo({
-                top: offsetPosition,
-                behavior: 'smooth'
-            });
+            const offsetPosition = element.getBoundingClientRect().top + window.pageYOffset - 80;
+            window.scrollTo({ top: offsetPosition, behavior: 'smooth' });
         }
     };
 
@@ -44,52 +37,58 @@ export const Navbar: React.FC = () => {
             initial={{ y: -100 }}
             animate={{ y: 0 }}
             transition={{ duration: 0.5 }}
-            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${scrolled
-                ? 'bg-white/80 dark:bg-gray-900/80 backdrop-blur-lg shadow-lg'
-                : 'bg-transparent'
-                }`}
+            className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
+                scrolled
+                    ? 'bg-white/90 dark:bg-gray-900/90 backdrop-blur-md border-b border-primary-100 dark:border-primary-900/40'
+                    : 'bg-transparent'
+            }`}
         >
-            <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+            <div className="max-w-screen-xl mx-auto px-5 lg:px-16">
                 <div className="flex items-center justify-between h-16">
                     {/* Logo */}
-                    <motion.button
+                    <button
                         onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
-                        whileHover={{ scale: 1.05 }}
-                        whileTap={{ scale: 0.95 }}
-                        className="text-2xl font-bold text-gray-900 dark:text-white"
+                        className="font-serif text-[22px] tracking-[-0.02em] text-gray-900 dark:text-white"
                     >
                         NT
-                    </motion.button>
+                    </button>
 
                     {/* Desktop Navigation */}
-                    <div className="hidden md:flex items-center gap-8">
+                    <div className="hidden md:flex items-center gap-7">
                         {navItems.map((item) => (
-                            <motion.button
+                            <button
                                 key={item.name}
                                 onClick={() => handleNavClick(item.href)}
-                                whileHover={{ scale: 1.05 }}
-                                whileTap={{ scale: 0.95 }}
-                                className="text-gray-700 dark:text-gray-300 hover:text-primary-600 dark:hover:text-primary-400 font-medium transition-colors"
+                                className="font-mono text-[11px] tracking-[0.08em] uppercase text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                             >
                                 {item.name}
-                            </motion.button>
+                            </button>
                         ))}
+
                         <ThemeToggle />
                     </div>
 
                     {/* Mobile Menu Button */}
-                    <div className="flex items-center gap-4 md:hidden">
+                    <div className="flex items-center gap-3 md:hidden">
                         <ThemeToggle />
-                        <motion.button
-                            whileTap={{ scale: 0.95 }}
+                        <button
                             onClick={() => setIsOpen(!isOpen)}
-                            className="p-2 text-gray-700 dark:text-gray-300"
+                            className="p-2 text-gray-600 dark:text-gray-400"
                             aria-label="Toggle menu"
                         >
-                            {isOpen ? <FiX size={24} /> : <FiMenu size={24} />}
-                        </motion.button>
+                            {isOpen ? <FiX size={20} /> : <FiMenu size={20} />}
+                        </button>
                     </div>
                 </div>
+
+                {/* Location bar — shown when scrolled */}
+                {scrolled && (
+                    <div className="hidden md:flex justify-end pb-1.5">
+                        <span className="font-mono text-[10px] tracking-[0.08em] text-gray-400 dark:text-gray-500">
+                            London, UK · Full UK Work Authorisation
+                        </span>
+                    </div>
+                )}
             </div>
 
             {/* Mobile Menu */}
@@ -99,24 +98,26 @@ export const Navbar: React.FC = () => {
                         initial={{ opacity: 0, height: 0 }}
                         animate={{ opacity: 1, height: 'auto' }}
                         exit={{ opacity: 0, height: 0 }}
-                        transition={{ duration: 0.3 }}
-                        className="md:hidden bg-white dark:bg-gray-900 border-t border-gray-200 dark:border-gray-800"
+                        transition={{ duration: 0.25 }}
+                        className="md:hidden bg-white dark:bg-gray-900 border-t border-primary-100 dark:border-primary-900/40"
                     >
-                        <div className="px-4 py-6 space-y-4">
+                        <div className="px-5 py-6 flex flex-col gap-1">
                             {navItems.map((item) => (
-                                <motion.button
+                                <button
                                     key={item.name}
                                     onClick={() => handleNavClick(item.href)}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="block w-full text-left px-4 py-2 text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-gray-800 rounded-lg font-medium transition-colors"
+                                    className="w-full text-left py-3 border-b border-primary-100 dark:border-primary-900/40 font-mono text-[12px] tracking-[0.08em] uppercase text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
                                 >
                                     {item.name}
-                                </motion.button>
+                                </button>
                             ))}
+                            <p className="mt-4 font-mono text-[10px] tracking-[0.06em] text-gray-400 dark:text-gray-500 text-center">
+                                London, UK · Full UK Work Authorisation
+                            </p>
                         </div>
                     </motion.div>
                 )}
             </AnimatePresence>
         </motion.nav>
     );
-};
+}

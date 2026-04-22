@@ -1,55 +1,57 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { FiHeart } from 'react-icons/fi';
 import { portfolioData } from '../data/portfolio';
 import { EmailPopover } from './ui/EmailPopover';
 
-export const Footer: React.FC = () => {
+export function Footer() {
     const { name, socials, email } = portfolioData;
     const currentYear = new Date().getFullYear();
 
     return (
         <footer
             id="contact"
-            className="bg-gray-900 dark:bg-black text-white py-12 px-4 sm:px-6 lg:px-8"
+            className="border-t border-primary-100 dark:border-primary-900/40 bg-white dark:bg-gray-900 py-16 px-5 lg:px-16"
         >
-            <div className="max-w-7xl mx-auto">
-                <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
+            <div className="max-w-screen-xl mx-auto">
+                <div className="grid grid-cols-1 md:grid-cols-3 gap-12 mb-12">
                     {/* Brand */}
                     <div>
-                        <h3 className="text-2xl font-bold mb-4">{name}</h3>
-                        <p className="text-gray-400">
-                            Full Stack Software Engineer based in London, UK
+                        <h3 className="font-serif text-[clamp(22px,2.5vw,30px)] leading-[1.1] tracking-[-0.02em] text-gray-900 dark:text-white mb-3">
+                            {name}
+                        </h3>
+                        <p className="font-mono text-[12px] tracking-[0.04em] text-gray-500 dark:text-gray-400">
+                            Full Stack Software Engineer<br />based in London, UK
                         </p>
                     </div>
 
                     {/* Quick Links */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
+                        <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-primary-500 dark:text-primary-400 mb-4 pb-3 border-b border-primary-100 dark:border-primary-900/40">
+                            Quick Links
+                        </div>
                         <ul className="space-y-2">
-                            {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map(
-                                (item) => (
-                                    <li key={item}>
-                                        <button
-                                            onClick={() =>
-                                                document
-                                                    .getElementById(item.toLowerCase())
-                                                    ?.scrollIntoView({ behavior: 'smooth' })
-                                            }
-                                            className="text-gray-400 hover:text-primary-400 transition-colors"
-                                        >
-                                            {item}
-                                        </button>
-                                    </li>
-                                )
-                            )}
+                            {['About', 'Skills', 'Experience', 'Projects', 'Contact'].map((item) => (
+                                <li key={item}>
+                                    <button
+                                        onClick={() =>
+                                            document
+                                                .getElementById(item.toLowerCase())
+                                                ?.scrollIntoView({ behavior: 'smooth' })
+                                        }
+                                        className="font-mono text-[12px] tracking-[0.04em] text-gray-500 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors"
+                                    >
+                                        {item}
+                                    </button>
+                                </li>
+                            ))}
                         </ul>
                     </div>
 
                     {/* Connect */}
                     <div>
-                        <h4 className="text-lg font-semibold mb-4">Connect</h4>
-                        <div className="flex gap-4">
+                        <div className="font-mono text-[11px] tracking-[0.1em] uppercase text-primary-500 dark:text-primary-400 mb-4 pb-3 border-b border-primary-100 dark:border-primary-900/40">
+                            Connect
+                        </div>
+                        <div className="flex gap-3">
                             {socials.map((social) => {
                                 const Icon = social.icon;
 
@@ -59,9 +61,9 @@ export const Footer: React.FC = () => {
                                             key={social.name}
                                             email={email}
                                             icon={Icon}
-                                            iconSize={20}
-                                            buttonClassName="p-3 bg-gray-800 rounded-lg hover:bg-primary-600 transition-colors"
-                                            popupClassName="absolute bottom-full right-0 z-20 mb-4 w-72 rounded-2xl border border-gray-700 bg-gray-900 p-4 text-left shadow-2xl"
+                                            iconSize={18}
+                                            buttonClassName="p-2.5 border border-primary-100 dark:border-primary-900/40 text-gray-500 dark:text-gray-400 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-colors"
+                                            popupClassName="absolute bottom-full right-0 z-20 mb-4 w-72 border border-primary-100 dark:border-primary-900/40 bg-white dark:bg-gray-900 p-4 text-left shadow-xl"
                                         />
                                     );
                                 }
@@ -72,12 +74,11 @@ export const Footer: React.FC = () => {
                                         href={social.url}
                                         target="_blank"
                                         rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.1, y: -3 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="p-3 bg-gray-800 rounded-lg hover:bg-primary-600 transition-colors"
+                                        whileHover={{ y: -2 }}
+                                        className="p-2.5 border border-primary-100 dark:border-primary-900/40 text-gray-500 dark:text-gray-400 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-colors"
                                         aria-label={social.name}
                                     >
-                                        <Icon size={20} />
+                                        <Icon size={18} />
                                     </motion.a>
                                 );
                             })}
@@ -86,14 +87,13 @@ export const Footer: React.FC = () => {
                 </div>
 
                 {/* Bottom Bar */}
-                <div className="pt-8 border-t border-gray-800">
-                    <div className="flex flex-col md:flex-row items-center justify-between gap-4">
-                        <p className="text-gray-400 text-sm">
+                <div className="pt-8 border-t border-primary-100 dark:border-primary-900/40">
+                    <div className="flex flex-col md:flex-row items-center justify-between gap-3">
+                        <p className="font-mono text-[11px] tracking-[0.04em] text-gray-400 dark:text-gray-500">
                             © {currentYear} {name}. All rights reserved.
                         </p>
-                        <p className="flex items-center gap-2 text-gray-400 text-sm">
-                            Built with <FiHeart className="text-red-500" /> using React,
-                            TypeScript & TailwindCSS
+                        <p className="font-mono text-[11px] tracking-[0.04em] text-gray-400 dark:text-gray-500">
+                            Built with React, TypeScript &amp; TailwindCSS
                         </p>
                     </div>
                 </div>
