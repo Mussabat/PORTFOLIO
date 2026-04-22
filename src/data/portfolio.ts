@@ -139,7 +139,7 @@ export const portfolioData: PortfolioData = {
                 'Mobile health platform (iOS & Android) showcased at CES, launched within 7 months. Led development of core screens, implemented push notifications, and optimised performance for production release at a major tech event.',
             techStack: ['Flutter', 'Push Notifications', 'REST APIs', 'State Management'],
             liveUrl: 'https://apps.apple.com/us/app/primefocus-health/id6748019074',
-            category: 'Mobile',
+            category: 'Full Stack',
         },
         {
             title: 'StudyMatch',
@@ -147,7 +147,7 @@ export const portfolioData: PortfolioData = {
                 'A mobile application connecting students with study partners based on shared interests and academic goals. Features real-time matching, chat functionality, and study group coordination.',
             techStack: ['Flutter', 'GoRouter', 'BLoC', 'Supabase', 'PostgreSQL'],
             githubUrl: 'https://github.com/Mussabat/study_match',
-            category: 'Mobile',
+            category: 'Full Stack',
         },
         {
             title: 'Wisely',
