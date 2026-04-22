@@ -1,115 +1,104 @@
-import { motion } from 'framer-motion';
-import { Section } from './ui/Section';
-import { GradientMesh } from './ui/GradientMesh';
+import { useState } from 'react';
 import { portfolioData } from '../data/portfolio';
-import { FaExternalLinkAlt, FaFilePdf, FaQuoteLeft } from 'react-icons/fa';
-import { FiBookOpen } from 'react-icons/fi';
 
 export function Publications() {
+    const [open, setOpen] = useState<number | null>(null);
+    const { publications } = portfolioData;
+
     return (
-        <Section
-            id="publications"
-            title="Research Publications"
-            className="bg-white dark:bg-gray-900 relative overflow-hidden"
-        >
-            <GradientMesh />
-            <div className="max-w-5xl mx-auto space-y-8 relative z-10">
-                {portfolioData.publications.map((publication, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, y: 24 }}
-                        whileInView={{ opacity: 1, y: 0 }}
-                        viewport={{ once: true }}
-                        transition={{
-                            duration: 0.45,
-                            delay: index * 0.08,
-                        }}
-                        whileHover={{ y: -4 }}
-                        className="rounded-2xl border border-gray-200 bg-white p-8 shadow-sm transition-shadow hover:shadow-lg dark:border-gray-700 dark:bg-gray-800"
-                    >
-                        <div className="space-y-6">
-                            <div className="inline-flex items-center gap-2 rounded-full bg-primary-100 px-4 py-2 text-sm font-medium text-primary-700 dark:bg-primary-900/30 dark:text-primary-300">
-                                <FiBookOpen />
-                                Research Paper
-                            </div>
+        <section id="publications" className="border-t border-primary-100 dark:border-primary-900/40 py-16 md:py-28">
+            <div className="max-w-screen-xl mx-auto px-5 lg:px-16">
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-[clamp(36px,5vw,68px)] leading-[1.05] tracking-[-0.025em] mb-12 max-w-[18ch] text-gray-900 dark:text-white">
+                    Peer-reviewed{' '}
+                    <em className="italic text-primary-600 dark:text-primary-400">publications.</em>
+                </h2>
 
-                            <h3 className="text-xl font-semibold leading-tight text-gray-900 dark:text-white">
-                                {publication.title}
-                            </h3>
-
-                            <p className="text-sm font-medium text-gray-600 dark:text-gray-400">
-                                {publication.authors}
-                            </p>
-
-                            <div className="flex flex-wrap items-center gap-4">
-                                <div className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300">
-                                    {publication.journal}
-                                </div>
-                                <div className="rounded-lg bg-gray-100 px-4 py-2 text-sm font-medium text-gray-700 dark:bg-gray-700 dark:text-gray-300">
-                                    {publication.year}
-                                </div>
-                                <div className="rounded-lg bg-primary-50 px-4 py-2 text-sm font-semibold text-primary-700 dark:bg-primary-900/20 dark:text-primary-300">
-                                    {publication.citations} citations
-                                </div>
-                            </div>
-
-                            <div className="rounded-xl border-l-4 border-primary-500 bg-gray-50 p-6 dark:bg-gray-900/50">
-                                <div className="flex items-start gap-4">
-                                    <FaQuoteLeft className="mt-1 flex-shrink-0 text-primary-500" />
-                                    <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed italic">
-                                        {publication.abstract}
-                                    </p>
-                                </div>
-                            </div>
-
-                            <div className="flex flex-wrap gap-4 pt-4">
-                                <motion.a
-                                    href={publication.url}
-                                    target="_blank"
-                                    rel="noopener noreferrer"
-                                    whileHover={{ scale: 1.05, y: -2 }}
-                                    whileTap={{ scale: 0.95 }}
-                                    className="inline-flex items-center gap-3 rounded-xl bg-primary-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-primary-700"
+                <div className="flex flex-col">
+                    {publications.map((pub, i) => {
+                        const isOpen = open === i;
+                        return (
+                            <div key={i}>
+                                {/* Row */}
+                                <div
+                                    onClick={() => setOpen(isOpen ? null : i)}
+                                    className={[
+                                        'grid gap-7 py-7 border-t border-primary-100 dark:border-primary-900/40 cursor-pointer transition-colors duration-150',
+                                        'grid-cols-[60px_1fr] sm:grid-cols-[80px_1fr_80px]',
+                                        'hover:bg-primary-50/60 dark:hover:bg-primary-900/10',
+                                        isOpen ? 'bg-primary-50/60 dark:bg-primary-900/10' : '',
+                                    ].join(' ')}
                                 >
-                                    <FaExternalLinkAlt />
-                                    View on Google Scholar
-                                </motion.a>
-                                {publication.pdfUrl && (
-                                    <motion.a
-                                        href={publication.pdfUrl}
-                                        target="_blank"
-                                        rel="noopener noreferrer"
-                                        whileHover={{ scale: 1.05, y: -2 }}
-                                        whileTap={{ scale: 0.95 }}
-                                        className="inline-flex items-center gap-3 rounded-xl bg-red-600 px-6 py-3 text-sm font-semibold text-white transition-colors hover:bg-red-700"
-                                    >
-                                        <FaFilePdf />
-                                        Download PDF
-                                    </motion.a>
+                                    {/* Year */}
+                                    <div className="font-mono text-[13px] text-gray-900 dark:text-white pt-1">
+                                        {pub.year}
+                                    </div>
+
+                                    {/* Content */}
+                                    <div>
+                                        <h3 className="font-serif text-[clamp(18px,2.2vw,24px)] leading-[1.2] tracking-[-0.01em] m-0 mb-2 text-gray-900 dark:text-white">
+                                            {pub.title}
+                                        </h3>
+                                        <div className="text-[13px] text-gray-500 dark:text-gray-400 italic leading-relaxed mb-1">
+                                            {pub.journal}
+                                        </div>
+                                        <div className="text-[13px] text-gray-500 dark:text-gray-400 leading-relaxed">
+                                            {pub.authors}
+                                        </div>
+                                    </div>
+
+                                    {/* Citations — hidden on mobile, shown sm+ */}
+                                    <div className="hidden sm:flex flex-col items-end pt-1">
+                                        <span className="font-serif text-[26px] leading-none text-primary-600 dark:text-primary-400 mb-1">
+                                            {pub.citations}
+                                        </span>
+                                        <span className="font-mono text-[10px] tracking-[0.1em] uppercase text-gray-400 dark:text-gray-500">
+                                            cites
+                                        </span>
+                                    </div>
+                                </div>
+
+                                {/* Expanded abstract */}
+                                {isOpen && (
+                                    <div className="grid grid-cols-[60px_1fr] sm:grid-cols-[80px_1fr_80px] gap-7 pb-7 border-t border-primary-100/60 dark:border-primary-900/20 bg-primary-50/60 dark:bg-primary-900/10">
+                                        <div />
+                                        <div className="pt-5">
+                                            <p className="text-[14px] text-gray-700 dark:text-gray-300 leading-relaxed max-w-[70ch] mb-4">
+                                                {pub.abstract}
+                                            </p>
+                                            <div className="flex gap-3">
+                                                <a
+                                                    href={pub.pdfUrl}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    onClick={e => e.stopPropagation()}
+                                                    className="font-mono text-[11px] px-4 py-2 border border-primary-200 dark:border-primary-700 rounded-full text-gray-800 dark:text-gray-200 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-colors"
+                                                >
+                                                    PDF ↗
+                                                </a>
+                                                <a
+                                                    href={pub.url}
+                                                    target="_blank"
+                                                    rel="noreferrer"
+                                                    onClick={e => e.stopPropagation()}
+                                                    className="font-mono text-[11px] px-4 py-2 border border-primary-200 dark:border-primary-700 rounded-full text-gray-800 dark:text-gray-200 hover:bg-primary-600 hover:text-white hover:border-primary-600 transition-colors"
+                                                >
+                                                    Scholar ↗
+                                                </a>
+                                            </div>
+                                        </div>
+                                        <div />
+                                    </div>
+                                )}
+
+                                {/* Bottom border for last item */}
+                                {i === publications.length - 1 && (
+                                    <div className="border-b border-primary-100 dark:border-primary-900/40" />
                                 )}
                             </div>
-                        </div>
-                    </motion.div>
-                ))}
+                        );
+                    })}
+                </div>
             </div>
-
-            {/* Google Scholar Profile Link */}
-            <motion.div
-                initial={{ opacity: 0 }}
-                whileInView={{ opacity: 1 }}
-                viewport={{ once: true }}
-                className="mt-12 text-center"
-            >
-                <a
-                    href="https://scholar.google.com/citations?user=-bwzjRwAAAAJ&hl=en"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="inline-flex items-center gap-2 rounded-lg bg-primary-600 px-6 py-3 font-medium text-white transition-colors hover:bg-primary-700"
-                >
-                    <FaExternalLinkAlt />
-                    View Full Google Scholar Profile
-                </a>
-            </motion.div>
-        </Section>
+        </section>
     );
 }
