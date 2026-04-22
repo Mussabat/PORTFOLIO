@@ -1,66 +1,68 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { Section } from './ui/Section';
-import { GradientMesh } from './ui/GradientMesh';
 import { portfolioData } from '../data/portfolio';
 
 export const About: React.FC = () => {
     const { about } = portfolioData;
 
     return (
-        <Section
-            id="about"
-            title="About Me"
-            className="bg-white dark:bg-gray-900 relative overflow-hidden"
-        >
-            <GradientMesh />
-            <div className="max-w-6xl mx-auto relative z-10">
-                <div className="flex flex-col lg:flex-row items-center gap-12">
-                    {/* Text content */}
-                    <div className="flex-1 space-y-4">
+        <section id="about" className="border-t border-primary-100 dark:border-primary-900/40 py-16 md:py-28">
+            <div className="max-w-screen-xl mx-auto px-5 lg:px-16">
+
+                {/* Headline */}
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-[clamp(36px,5vw,68px)] leading-[1.05] tracking-[-0.025em] mb-16 max-w-[22ch] text-gray-900 dark:text-white">
+                    Engineer who cares about{' '}
+                    <em className="italic text-primary-600 dark:text-primary-400">what ships</em>
+                    , and how it holds up after.
+                </h2>
+
+                {/* Two-column: text left, image right */}
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_400px] gap-16 items-start">
+
+                    {/* Body copy */}
+                    <div className="space-y-5">
                         {about.map((paragraph, index) => (
                             <motion.p
                                 key={index}
-                                initial={{ opacity: 0, y: 20 }}
+                                initial={{ opacity: 0, y: 16 }}
                                 whileInView={{ opacity: 1, y: 0 }}
                                 viewport={{ once: true }}
-                                transition={{ duration: 0.6, delay: index * 0.1 }}
-                                className="text-base text-gray-700 dark:text-gray-300 leading-relaxed"
+                                transition={{ duration: 0.55, delay: index * 0.08 }}
+                                className="text-[14px] leading-[1.6] text-gray-700 dark:text-gray-300 max-w-[70ch]"
                             >
                                 {paragraph}
                             </motion.p>
                         ))}
 
+                        {/* GGS callout */}
                         <motion.div
-                            initial={{ opacity: 0, y: 20 }}
+                            initial={{ opacity: 0, y: 16 }}
                             whileInView={{ opacity: 1, y: 0 }}
                             viewport={{ once: true }}
-                            transition={{ duration: 0.6, delay: 0.4 }}
-                            whileHover={{ scale: 1.02, y: -5 }}
-                            className="mt-6 p-6 bg-gradient-to-r from-primary-50 to-primary-100 dark:from-primary-900/20 dark:to-primary-800/20 rounded-2xl border-2 border-primary-200 dark:border-primary-700 shadow-lg hover:shadow-2xl transition-shadow cursor-pointer"
+                            transition={{ duration: 0.55, delay: 0.35 }}
+                            className="mt-2 p-5 border border-primary-200 dark:border-primary-700 bg-primary-50 dark:bg-primary-900/20 rounded-none"
                         >
-                            <p className="text-sm font-semibold text-primary-900 dark:text-primary-100 text-center leading-relaxed">
+                            <p className="font-mono text-[13px] text-primary-700 dark:text-primary-300 leading-relaxed">
                                 💫 Generation Google Scholar — the only Bangladeshi woman selected among 15,000+ applicants across Asia-Pacific
                             </p>
                         </motion.div>
                     </div>
 
-                    {/* Illustration */}
+                    {/* Image */}
                     <motion.div
-                        initial={{ opacity: 0, x: 40 }}
+                        initial={{ opacity: 0, x: 30 }}
                         whileInView={{ opacity: 1, x: 0 }}
                         viewport={{ once: true }}
-                        transition={{ duration: 0.7, delay: 0.2 }}
-                        className="lg:w-[420px] w-full flex-shrink-0"
+                        transition={{ duration: 0.65, delay: 0.15 }}
+                        className="w-full"
                     >
                         <img
                             src="/about-illustration.svg"
-                            alt="Project completed illustration"
-                            className="w-full h-auto drop-shadow-xl"
+                            alt="About illustration"
+                            className="w-full h-auto"
                         />
                     </motion.div>
                 </div>
             </div>
-        </Section>
+        </section>
     );
 };

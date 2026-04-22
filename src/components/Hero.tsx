@@ -71,19 +71,19 @@ export const Hero: React.FC = () => {
 
                 <motion.h1
                     variants={item}
-                    className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl font-bold text-gray-900 dark:text-white mb-6 leading-tight"
+                    className="font-serif text-5xl sm:text-6xl md:text-7xl lg:text-8xl tracking-[-0.025em] text-gray-900 dark:text-white mb-6 leading-[1.05]"
                 >
                     <span className="block">Hi, I'm {name.split(' ')[0]} 👋</span>
                 </motion.h1>
 
                 <motion.div
                     variants={item}
-                    className="text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-300 font-medium mb-8 leading-relaxed"
+                    className="font-serif text-2xl sm:text-3xl md:text-4xl text-gray-700 dark:text-gray-300 tracking-[-0.02em] mb-8 leading-[1.15]"
                 >
                     <p className="mb-4">
                         I build{' '}
                         <motion.span
-                            className="text-primary-600 dark:text-primary-400 font-bold inline-block"
+                            className="text-primary-600 dark:text-primary-400 italic inline-block"
                             animate={{
                                 scale: [1, 1.05, 1],
                             }}
@@ -97,7 +97,7 @@ export const Hero: React.FC = () => {
                         </motion.span>
                         ,{' '}
                         <motion.span
-                            className="text-primary-600 dark:text-primary-400 font-bold inline-block"
+                            className="text-primary-600 dark:text-primary-400 italic inline-block"
                             animate={{
                                 scale: [1, 1.05, 1],
                             }}
@@ -119,7 +119,7 @@ export const Hero: React.FC = () => {
 
                 <motion.p
                     variants={item}
-                    className="text-lg sm:text-xl text-gray-600 dark:text-gray-300 max-w-3xl mx-auto mb-12 leading-relaxed"
+                    className="text-[14px] text-gray-500 dark:text-gray-400 max-w-[70ch] mx-auto mb-12 leading-[1.6]"
                 >
                     {summary}
                 </motion.p>
