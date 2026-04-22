@@ -1,92 +1,94 @@
-import React from 'react';
 import { motion } from 'framer-motion';
-import { FiBriefcase, FiCalendar, FiMapPin } from 'react-icons/fi';
-import { Section } from './ui/Section';
 import { portfolioData } from '../data/portfolio';
 
 export const Experience: React.FC = () => {
     const { experiences } = portfolioData;
+    const e = experiences[0];
+    const half = Math.ceil(e.responsibilities.length / 2);
+    const left = e.responsibilities.slice(0, half);
+    const right = e.responsibilities.slice(half);
 
     return (
-        <Section
-            id="experience"
-            title="Professional Experience"
-            className="bg-white dark:bg-gray-900"
-        >
-            <div className="max-w-6xl mx-auto flex flex-col lg:flex-row gap-10 items-start">
-                {/* Timeline */}
-                <div className="flex-1">
-                {experiences.map((exp, index) => (
-                    <motion.div
-                        key={index}
-                        initial={{ opacity: 0, x: -50 }}
-                        whileInView={{ opacity: 1, x: 0 }}
-                        viewport={{ once: true }}
-                        transition={{ duration: 0.6, delay: index * 0.2 }}
-                        className="relative pl-2 pb-10 last:pb-0"
-                    >
-                        <div className="bg-gray-50 dark:bg-gray-800 rounded-xl p-6 shadow-lg border border-gray-200 dark:border-gray-700 hover:shadow-xl transition-shadow">
-                            <div className="flex flex-wrap items-start justify-between gap-4 mb-4">
-                                <div>
-                                    <h3 className="text-lg font-bold text-gray-900 dark:text-white mb-1">
-                                        {exp.title}
-                                    </h3>
-                                    <div className="flex flex-wrap items-center gap-4 text-gray-600 dark:text-gray-400">
-                                        <div className="flex items-center gap-2">
-                                            <FiBriefcase size={16} />
-                                            <span className="font-semibold text-primary-600 dark:text-primary-400">
-                                                {exp.company}
-                                            </span>
-                                        </div>
-                                        <div className="flex items-center gap-2">
-                                            <FiMapPin size={16} />
-                                            <span>{exp.location}</span>
-                                        </div>
-                                    </div>
-                                </div>
-                                <div className="flex items-center gap-2 text-gray-600 dark:text-gray-400 bg-primary-50 dark:bg-primary-900/20 px-4 py-2 rounded-lg">
-                                    <FiCalendar size={16} />
-                                    <span className="font-medium">{exp.period}</span>
-                                </div>
-                            </div>
+        <section id="experience" className="border-t border-primary-100 dark:border-primary-900/40 py-16 md:py-28">
+            <div className="max-w-screen-xl mx-auto px-5 lg:px-16">
 
-                            <div className="space-y-3">
-                                {exp.responsibilities.map((responsibility, idx) => (
-                                    <motion.div
-                                        key={idx}
-                                        initial={{ opacity: 0, x: -20 }}
-                                        whileInView={{ opacity: 1, x: 0 }}
-                                        viewport={{ once: true }}
-                                        transition={{ duration: 0.4, delay: idx * 0.05 }}
-                                        className="flex items-start gap-3"
-                                    >
-                                        <div className="mt-2 w-2 h-2 bg-primary-600 dark:bg-primary-400 rounded-full flex-shrink-0" />
-                                        <p className="text-sm text-gray-700 dark:text-gray-300 leading-relaxed">
-                                            {responsibility}
-                                        </p>
-                                    </motion.div>
-                                ))}
+                {/* Heading */}
+                <h2 className="font-serif text-4xl md:text-5xl lg:text-[clamp(36px,5vw,68px)] leading-[1.05] tracking-[-0.025em] mb-16 max-w-[22ch] text-gray-900 dark:text-white">
+                    Where the{' '}
+                    <em className="italic text-primary-600 dark:text-primary-400">real scar tissue</em>{' '}
+                    came from.
+                </h2>
+
+                {/* Role header + image row */}
+                <div className="grid grid-cols-1 lg:grid-cols-[1fr_320px] gap-12 items-start">
+
+                    {/* Left: role + bullets */}
+                    <div>
+                        {/* Role block */}
+                        <div className="mb-10 pb-8 border-b border-primary-100 dark:border-primary-900/40">
+                            <h3 className="font-serif text-[clamp(26px,3vw,40px)] leading-[1.05] tracking-[-0.02em] text-gray-900 dark:text-white mb-3">
+                                {e.title}
+                            </h3>
+                            <div className="flex flex-wrap gap-4 font-mono text-[12px] tracking-[0.06em] text-gray-500 dark:text-gray-400">
+                                <span className="text-gray-900 dark:text-white">{e.company}</span>
+                                <span className="text-primary-300 dark:text-primary-700">/</span>
+                                <span>{e.location}</span>
+                                <span className="text-primary-300 dark:text-primary-700">/</span>
+                                <span>{e.period}</span>
                             </div>
                         </div>
-                    </motion.div>
-                ))}
-                </div>
 
-                {/* Right Illustration */}
-                <motion.div
-                    initial={{ opacity: 0, x: 40 }}
-                    whileInView={{ opacity: 1, x: 0 }}
-                    viewport={{ once: true }}
-                    transition={{ duration: 0.7 }}
-                    className="lg:w-[360px] w-full flex-shrink-0 hidden lg:flex items-center justify-center"
-                >
-                    <img
-                        src="/experience-illustration-right.svg"
-                        alt="Code snippets illustration"
-                        className="w-full"
-                    />
-                </motion.div>
+                        {/* Two-column bullet grid */}
+                        <div className="grid grid-cols-1 sm:grid-cols-2 gap-x-12 gap-y-0">
+                            <ul className="flex flex-col">
+                                {left.map((r, i) => (
+                                    <motion.li
+                                        key={i}
+                                        initial={{ opacity: 0, x: -12 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: i * 0.05 }}
+                                        className="flex gap-3 py-[10px] border-b border-primary-100 dark:border-primary-900/30 last:border-b-0 text-[14px] text-gray-700 dark:text-gray-300 leading-[1.6]"
+                                    >
+                                        <span className="text-primary-500 dark:text-primary-400 font-mono flex-shrink-0 mt-[1px]">→</span>
+                                        {r}
+                                    </motion.li>
+                                ))}
+                            </ul>
+                            <ul className="flex flex-col">
+                                {right.map((r, i) => (
+                                    <motion.li
+                                        key={i}
+                                        initial={{ opacity: 0, x: -12 }}
+                                        whileInView={{ opacity: 1, x: 0 }}
+                                        viewport={{ once: true }}
+                                        transition={{ duration: 0.4, delay: (i + half) * 0.05 }}
+                                        className="flex gap-3 py-[10px] border-b border-primary-100 dark:border-primary-900/30 last:border-b-0 text-[14px] text-gray-700 dark:text-gray-300 leading-[1.6]"
+                                    >
+                                        <span className="text-primary-500 dark:text-primary-400 font-mono flex-shrink-0 mt-[1px]">→</span>
+                                        {r}
+                                    </motion.li>
+                                ))}
+                            </ul>
+                        </div>
+                    </div>
+
+                    {/* Right: illustration */}
+                    <motion.div
+                        initial={{ opacity: 0, x: 30 }}
+                        whileInView={{ opacity: 1, x: 0 }}
+                        viewport={{ once: true }}
+                        transition={{ duration: 0.65, delay: 0.15 }}
+                        className="hidden lg:block w-full"
+                    >
+                        <img
+                            src="/experience-illustration-right.svg"
+                            alt="Experience illustration"
+                            className="w-full h-auto"
+                        />
+                    </motion.div>
+                </div>
             </div>
-        </Section>
+        </section>
     );
 };
